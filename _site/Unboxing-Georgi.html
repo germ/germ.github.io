@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Unboxing Georgi « g Heavy Industries</title>
+  <meta name="description" content="Unboxing GeorgiCongrats on the purchase of your Georgi! Let’s get the little guy all set up.In your package you should have a little note from me, the two ha...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/Unboxing-Georgi">
+  <link rel="alternate" type="application/rss+xml" title="g Heavy Industries" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="header-placeholder"></div>
+<header class="header">
+  <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="/">g Heavy Industries</a>
+    <nav class="site-nav">
+      
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="col-main">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Unboxing Georgi</h1>
+    <p class="post-meta">Mar 10, 2019</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="unboxing-georgi">Unboxing Georgi</h1>
+<p>Congrats on the purchase of your Georgi! Let’s get the little guy all set up.</p>
+
+<p>In your package you should have a little note from me, the two halves of Georgi and any cables you may have ordered. If you didn’t order cables from me you will need a MiniUSB and a TRRS cable (Looks like a headphone connector, but has 4 gold bands instead of 3!).</p>
+
+<p>Now go ahead and plug everything in! Be gentle one the cabling for the first few inserts as it can be a little tight until it wears in. Plug it into your computer and fire up Plover, open your machine settings, scan and select the correct serial port. That’s it!</p>
+
+<p>Your board is now ready for use with Plover, but you might accidentally toggle a few modes that are inside of Georgi, so let’s go over them.</p>
+
+<p><strong>Remember! If you have issues, unplugging your board and plugging it in will reset to a clean state.</strong></p>
+
+<h1 id="modes">Modes</h1>
+<p>Georgi has three operation modes: Steno, QWERTY and Command.</p>
+
+<p>Lets start with Steno. If you’re using a Georgi you’re probably familiar with this already. <a href="https://www.artofchording.com/">If not, The Art Of Chording has you covered.</a>.
+<img src="/img/georgi/steno.png" alt="steno layout" /></p>
+
+<p>The QWER button toggles QWERTY mode, if you ever accidentally can’t type you probably hit that.
+The SYMB button is a Momentary hold for symbols, you have to hold it while inserting them!</p>
+
+<p>We’ll go on about that later but for now know that you can hold either of those in steno mode for fingerspelling of inserting symbols!</p>
+
+<p>QWERTY mode is the main mode you’ll be in if you’re not doing steno 24/7. Here’s the keymap
+<img src="/img/georgi/qwerty.png" alt="qwerty layout" />
+Pretty similar to a standard QWERTY eh? The markings along a crack denote pushing both of those keys in a chord, blue dot is for the four centered around it. The main difference between this and a normal board is that a traditional keyboard sends keypresses as they’re depressed, this one send the key only after the chord has been stroked!</p>
+
+<p>It’s a little weird and may take a few days to get used to the timing difference. Stick with it. 
+The numbers can be accessed from QWER mode by simply holding num.</p>
+
+<p><img src="/img/georgi/symbol.png" alt="symbols layer" />
+The symbols layer is accessed by holding down the Symbol key and cannot be switched to. Some of these keys can be shifted just like their QWERTY counterparts and to do that hold the right shift key! The number layer is accessed by holding the number key while pressing the key. Usually it’s easier to insert numbers directly from the QWERTY layer!</p>
+
+<p>There are a few other ‘layers’ as well, the coloured keys are the prefix for the chord!
+There are some chords tucked away on the thumbs as well on the bottom :)
+<img src="/img/georgi/move.png" alt="movement layer" />
+<img src="/img/georgi/function.png" alt="function layer" />
+<img src="/img/georgi/media.png" alt="media layer" />
+<img src="/img/georgi/thumbs.png" alt="thumbs" /></p>
+
+<h1 id="fallbacks">Fallbacks</h1>
+
+<p>Georgi uses GeminiPR for serial communication, this is what allows you to quickly toggle back and forth between Plover and QWERTY input. However this isn’t always an option (work machine, limited environment, etc). So for these kind of situations the Steno layout can be used as a simple NKRO keyboard for plover. If you need this, remember to have a stroke for enabling/disabling plover in your dictionaries! Otherwise when you switch to QWERTY mode, plover will still be active!</p>
+
+<p><img src="/img/georgi/fallback.png" alt="fallback" /></p>
+
+<h1 id="command-mode">Command Mode</h1>
+
+<p>Due to the size of the board, key combos can be a pain if there is a conflict. What do you do when the key you’re trying to chord overlaps with another that you need? Enter Command mode. Command mode buffers all of the keys that are pressed while it’s active, once you exit command mode the keys are all pressed down, and then released in one go. So inserting say ‘Ctrl+Shift+S’ could bbe done in the following way ‘Command Mode/Ctrl/Shift/S/Command Mode’.</p>
+
+<p><img src="/img/georgi/command.png" alt="Command" /></p>
+
+<p>Note: There are a good number of alternative binds for modifiers and you can always add definitions to your firmware! If you find a bind that you’re using frequently, don’t just whack it in over and over again in command mode, add it to your keyboard, find a alternate way to stroke it or use plover to bridge the gap!</p>
+
+<h1 id="protips">Protips</h1>
+
+<ul>
+  <li>Do yourself a favour and print off the keyboard map and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit.</li>
+  <li>You can do temporary plover from QWERTY, If you hold the STENO button in your chord, Use this for sending shortcuts to plover for binds and other stuff.</li>
+  <li>Similarity you can do temporary QWERTY fingerspells from steno! Hold the steno button while you’re typing.</li>
+  <li>Keyup will take time to get used to! Seriously, you’re used to typing on a</li>
+</ul>
+
+  </article>
+  
+  
+
+
+
+
+</div>
+
+        </div>
+        <div class="col-second">
+          <div class="col-box col-box-author">
+  <div class="col-box-title name">Germ</div>
+  <p>Keyboard Goon, Here we have random docs and guides for keyboards I've made.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/germ">GitHub</a>
+    
+    
+    
+    <a href="mailto:bernhardt@gmail.com">Email</a>
+    
+  </p>
+</div>
+
+<!--
+<div class="col-box">
+  <div class="col-box-title">Newest Posts</div>
+  <ul class="post-list">
+    
+      <li><a class="post-link" href="/Unboxing-Georgi">Unboxing Georgi</a></li>
+    
+      <li><a class="post-link" href="/Hacking-Georgi">Hacking Georgi</a></li>
+    
+      <li><a class="post-link" href="/Configuring-Georgi">Configuring Georgi</a></li>
+    
+      <li><a class="post-link" href="/Gergo-Setup">Gergo Setup</a></li>
+    
+  </ul>
+</div>-->
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">TOC</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+<div class="wrapper">
+&copy; g Heavy Industries
+</div>
+</footer>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+<script src="/js/easybook.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,1 +1,48 @@
-theme: jekyll-theme-leap-day
+# Site settings
+title: g Heavy Industries
+url: "http://docs.gboards.ca"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+description: >
+  Guides for gBoards
+
+# Your information
+email: bernhardtjeremy@gmail.com
+author: Germ
+avatar: https://avatars0.githubusercontent.com/u/10545?s=460&v=4
+profile: Keyboard Dan the keyboard man. Here we have random docs and guides for keyboards I've made.
+github_username:  germ
+profile_links:
+  Email: "mailto:bernhardt@gmail.com"
+  Twitter: "https://twitter.com/gboardheavy"
+
+excerpt_separator: <!--more-->
+
+header:
+  links:             # Links on the header. Link to in-site page with a slash as prefix
+
+permalink: /:title
+plugins:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+# Build settings
+paginate: 50
+paginate_path: "page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+# https://jekyllrb.com/docs/configuration/#precedence
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
