@@ -50,7 +50,7 @@ The two 22pF caps are labelled and located by the Oscillator, 1uF by the MCU and
 Next up resistors, you've got 3 kinds 10K (103), 2.2K (222) 22Ohms  (22R0). Take a look on the silk screen for them and whack em in there! They will all be near the MCU or  USB port.If you see R1 on your board that's supposed to be a 2.2K resistor!
 
 ### Osc
-The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest. Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away.
+The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest. Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away. Note if you're probing around in there [these diagonal pads are connected to each other](https://raw.githubusercontent.com/germ/GergoDocs/master/img/2.png)
 
 ### ICs
 Lastly the hard stuff! Remember if you mess up, you can order more electronics from the store!
@@ -59,7 +59,7 @@ So you should have a few components left, we're going to start with the MCP (rec
 
 Tin a pad on the top corner of it's pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it's aligned do the same to a corner pin on the other side of the board. Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next. Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.
 
-Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](https://cdn.pbrd.co/images/HTQG2is.jpg).
+Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](https://cdn.pbrd.co/images/HTQG2is.jpg). Also one batch of PCBs has a huge circle instead of a tiny marker, [so if you don't see something like this](https://raw.githubusercontent.com/germ/GergoDocs/master/img/26.png), that giant curved line is supposed to be that tiny circle. Line it up with that image.
 
 ### Connectors
 Assuming you've done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch. Use flux for  the MiniUSB port and be careful of bridging. If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters. It just makes getting into position much easier. Be sure to wick out any solder bridges.
