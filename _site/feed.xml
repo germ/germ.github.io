@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2019 04:18:22 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2019 04:18:22 -0600</lastBuildDate>
+    <pubDate>Thu, 14 Mar 2019 07:24:00 -0600</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2019 07:24:00 -0600</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -151,28 +151,34 @@ There are some chords tucked away on the thumbs as well on the bottom :)
         <description>&lt;h1 id=&quot;hacking-georgi&quot;&gt;Hacking Georgi&lt;/h1&gt;
 &lt;p&gt;Alright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here you’re going to need to know some QMK internals so &lt;a href=&quot;https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk&quot;&gt;give this excellent guide a read&lt;/a&gt; and come on back.&lt;/p&gt;
 
-&lt;h1 id=&quot;how-georgi-do&quot;&gt;How Georgi Do&lt;/h1&gt;
+&lt;h3 id=&quot;how-georgi-do&quot;&gt;How Georgi Do&lt;/h3&gt;
 &lt;p&gt;Pop open sten.h so you have a reference to use. Everything that Georgi does is independant of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; to update this chord as keys come in and hook &lt;code class=&quot;highlighter-rouge&quot;&gt;send_steno_chord_user&lt;/code&gt; to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).&lt;/p&gt;
 
-&lt;h2 id=&quot;cchord&quot;&gt;cChord&lt;/h2&gt;
+&lt;h3 id=&quot;cchord&quot;&gt;cChord&lt;/h3&gt;
 &lt;p&gt;This is just a bigass bitfield that is set in &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; we can add keys to this easily but there are a total maximum of 32 possible states we can jam in there. To define your own codes append a entry to the ORDER enum, make a nice pretty #define for it and start adding entries to your keymap.&lt;/p&gt;
 
-&lt;h2 id=&quot;key-repeat&quot;&gt;Key Repeat&lt;/h2&gt;
+&lt;h3 id=&quot;key-repeat&quot;&gt;Key Repeat&lt;/h3&gt;
 &lt;p&gt;Once the first button press comes in we start a timer and keep checking it in &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix_scan_user&lt;/code&gt;, if this timer expires we send the lookup the current chords and reset the timer.&lt;/p&gt;
 
-&lt;h2 id=&quot;mouse-keys&quot;&gt;Mouse Keys&lt;/h2&gt;
-&lt;p&gt;Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys&quot;&gt;this list here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;mouse-keys&quot;&gt;Mouse Keys&lt;/h3&gt;
+&lt;p&gt;Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys&quot;&gt;this list here&lt;/a&gt;. We do this with the clickMouse() function, if the chord is too short to register a repeat a single click is generated.&lt;/p&gt;
 
-&lt;h2 id=&quot;send&quot;&gt;Send&lt;/h2&gt;
-&lt;p&gt;Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code()&lt;/p&gt;
+&lt;h3 id=&quot;send&quot;&gt;Send&lt;/h3&gt;
+&lt;p&gt;Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code() Quantum Codes cannot be used here. You need to use SEND otherwise command mode won’t work!&lt;/p&gt;
 
-&lt;h2 id=&quot;command-mode&quot;&gt;Command mode&lt;/h2&gt;
-&lt;p&gt;The buffer can store up to 20 different keypresses (if you somehow need more, update config.h). The way we do this is by&lt;/p&gt;
+&lt;h3 id=&quot;command-mode&quot;&gt;Command mode&lt;/h3&gt;
+&lt;p&gt;The buffer can store up to 20 different keypresses (if you somehow need more, update &lt;strong&gt;REP_DELAY&lt;/strong&gt;). The way we do this is by wrapping &lt;strong&gt;register_code()&lt;/strong&gt; with send and replaying the buffer depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won’t be in there.&lt;/p&gt;
 
-&lt;p&gt;In addition to the handling logic, the following functions are currently provided.&lt;/p&gt;
+&lt;h3 id=&quot;qwerty-fallback&quot;&gt;QWERTY Fallback&lt;/h3&gt;
+&lt;p&gt;proessFakeSteno() simply maps chords to NKRO Plover as a fallback mode. Ideally we would have a datastructure for various dictionaries but switching the called look up table seems to be fine. This is a young project, submit a PR.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;clickMouse&lt;/strong&gt;: Send&lt;/p&gt;
+&lt;h3 id=&quot;adding-functionality&quot;&gt;Adding functionality&lt;/h3&gt;
+&lt;p&gt;All of the logic happens in &lt;strong&gt;process_steno_chord_user&lt;/strong&gt;, this should be your main place to add/augment functionality. In here you can preprocess chords before passing them off for handling, enable toggles and disable features, etc. You need to remember that just like in any dictionary, there is a order that everything is evaluated in, so be careful.&lt;/p&gt;
 
+&lt;p&gt;Two exit points are provided to jump to, &lt;strong&gt;out&lt;/strong&gt; which halts further processing and cleans up, and &lt;strong&gt;steno&lt;/strong&gt; which will clean up and pass of the chords to Plover. Local gotos are okay, get at me.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-qmk-jazz&quot;&gt;Other QMK jazz&lt;/h3&gt;
+&lt;p&gt;There’s a ton of stuff that can be leveraged here. Take a look through the tmk/common folder for some ideas and weird whacky keyboards you see around. This is a computer, make it do weird shit! If you need a hand reach out, I’ll warn you I suck at steno though.&lt;/p&gt;
 </description>
         <pubDate>Fri, 08 Mar 2019 00:00:00 -0600</pubDate>
         <link>http://localhost:4000/Hacking-Georgi</link>

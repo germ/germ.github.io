@@ -43,28 +43,34 @@
     <h1 id="hacking-georgi">Hacking Georgi</h1>
 <p>Alright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here you’re going to need to know some QMK internals so <a href="https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk">give this excellent guide a read</a> and come on back.</p>
 
-<h1 id="how-georgi-do">How Georgi Do</h1>
+<h3 id="how-georgi-do">How Georgi Do</h3>
 <p>Pop open sten.h so you have a reference to use. Everything that Georgi does is independant of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook <code class="highlighter-rouge">process_steno_user</code> to update this chord as keys come in and hook <code class="highlighter-rouge">send_steno_chord_user</code> to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).</p>
 
-<h2 id="cchord">cChord</h2>
+<h3 id="cchord">cChord</h3>
 <p>This is just a bigass bitfield that is set in <code class="highlighter-rouge">process_steno_user</code> we can add keys to this easily but there are a total maximum of 32 possible states we can jam in there. To define your own codes append a entry to the ORDER enum, make a nice pretty #define for it and start adding entries to your keymap.</p>
 
-<h2 id="key-repeat">Key Repeat</h2>
+<h3 id="key-repeat">Key Repeat</h3>
 <p>Once the first button press comes in we start a timer and keep checking it in <code class="highlighter-rouge">matrix_scan_user</code>, if this timer expires we send the lookup the current chords and reset the timer.</p>
 
-<h2 id="mouse-keys">Mouse Keys</h2>
-<p>Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys">this list here</a></p>
+<h3 id="mouse-keys">Mouse Keys</h3>
+<p>Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys">this list here</a>. We do this with the clickMouse() function, if the chord is too short to register a repeat a single click is generated.</p>
 
-<h2 id="send">Send</h2>
-<p>Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code()</p>
+<h3 id="send">Send</h3>
+<p>Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code() Quantum Codes cannot be used here. You need to use SEND otherwise command mode won’t work!</p>
 
-<h2 id="command-mode">Command mode</h2>
-<p>The buffer can store up to 20 different keypresses (if you somehow need more, update config.h). The way we do this is by</p>
+<h3 id="command-mode">Command mode</h3>
+<p>The buffer can store up to 20 different keypresses (if you somehow need more, update <strong>REP_DELAY</strong>). The way we do this is by wrapping <strong>register_code()</strong> with send and replaying the buffer depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won’t be in there.</p>
 
-<p>In addition to the handling logic, the following functions are currently provided.</p>
+<h3 id="qwerty-fallback">QWERTY Fallback</h3>
+<p>proessFakeSteno() simply maps chords to NKRO Plover as a fallback mode. Ideally we would have a datastructure for various dictionaries but switching the called look up table seems to be fine. This is a young project, submit a PR.</p>
 
-<p><strong>clickMouse</strong>: Send</p>
+<h3 id="adding-functionality">Adding functionality</h3>
+<p>All of the logic happens in <strong>process_steno_chord_user</strong>, this should be your main place to add/augment functionality. In here you can preprocess chords before passing them off for handling, enable toggles and disable features, etc. You need to remember that just like in any dictionary, there is a order that everything is evaluated in, so be careful.</p>
 
+<p>Two exit points are provided to jump to, <strong>out</strong> which halts further processing and cleans up, and <strong>steno</strong> which will clean up and pass of the chords to Plover. Local gotos are okay, get at me.</p>
+
+<h3 id="other-qmk-jazz">Other QMK jazz</h3>
+<p>There’s a ton of stuff that can be leveraged here. Take a look through the tmk/common folder for some ideas and weird whacky keyboards you see around. This is a computer, make it do weird shit! If you need a hand reach out, I’ll warn you I suck at steno though.</p>
 
   </article>
   
