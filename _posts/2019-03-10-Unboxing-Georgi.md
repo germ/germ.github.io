@@ -59,9 +59,14 @@ Due to the size of the board, key combos can be a pain if there is a conflict. W
 
 Note: There are a good number of alternative binds for modifiers and you can always add definitions to your firmware! If you find a bind that you're using frequently, don't just whack it in over and over again in command mode, add it to your keyboard, find a alternate way to stroke it or use plover to bridge the gap!
 
-# Protips
+# Entering QMK (Gaming mode)
 
-- Do yourself a favour and print off the keyboard map and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit.
+![Command](/img/georgi/gaming.png)
+
+Pressing this chord will move to the next avalible QMK layer (or do nothing if you only have the steno layer). This layer acts like a traditional keyboard as opposed to stenotype. On this layer are your traditional WASD and a momentary layer for numbers/lower qwerty. To return to steno press the right number key.
+
+# Protips
+- Do yourself a favour and print off the [keyboard map](/img/georgi/keymap.png) and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!
 - You can do temporary plover from QWERTY, If you hold the STENO button in your chord, Use this for sending shortcuts to plover for binds and other stuff.
 - Similarity you can do temporary QWERTY fingerspells from steno! Hold the steno button while you're typing.
-- Keyup will take time to get used to! Seriously, you're used to typing on a 
+- Keyup will take time to get used to! Seriously, you're used to typing on a traditional keyboard, this will mess you up for a bit.

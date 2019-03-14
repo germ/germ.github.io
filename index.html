@@ -7,7 +7,7 @@ layout: default
   <h1 class="page-heading">g Heavy Guides</h1>
 
   <ul class="post-list">
-    {% for tag in site.tags %}
+    {% for tag in site.tags reversed %}
 	<h1>{{ tag[0] }}</h1>
 		{% for post in tag[1] %}
 			  <li>

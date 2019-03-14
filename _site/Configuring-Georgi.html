@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Configuring Georgi « g Heavy Industries</title>
+  <meta name="description" content="Georgi ConfigurationAwesome, now that you’ve figured out the convoluded shitshow that is Georgi, let’s get on making it usable for you! A little foreword is ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/Configuring-Georgi">
+  <link rel="alternate" type="application/rss+xml" title="g Heavy Industries" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="header-placeholder"></div>
+<header class="header">
+  <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="/">g Heavy Industries</a>
+    <nav class="site-nav">
+      
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="col-main">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Configuring Georgi</h1>
+    <p class="post-meta">Mar 9, 2019</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="georgi-configuration">Georgi Configuration</h1>
+
+<p>Awesome, now that you’ve figured out the convoluded shitshow that is Georgi, let’s get on making it usable for you! A little foreword is necessary here, if you’ve used QMK before, Georgi does some very unQMK things.</p>
+
+<h1 id="the-future">The Future</h1>
+<p>We’re currently working with the QMK team to develop a front end that is compatible with the <a href="http://config.qmk.fm">QMK configurator</a>. Once this is done configuring Georgi or other steno boards from the browser will be possible. Until then, we need to set up the build environment. <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md">So give this a diddle and come on back.</a>.</p>
+
+<h1 id="structure-of-a-keymap">Structure of a keymap</h1>
+<p>Good on you for getting that all set up!</p>
+
+<p>Take a second to familarize yourself with this <a href="https://github.com/germ/qmk_firmware/blob/georgi/keyboards/georgi/keymaps/default/keymap.c">example keymap</a>. Look a little funky? I told you it would be a little weird.</p>
+
+<p>Let’s start with the entry point will be called during processing, <strong>processQwerty()</strong> is called anytime a Symbol or Qwerty button is to be looked up. The easiest way to think of this is as a small dictionary onboard your keyboard. In steno mode we just send the steno chords, in Qwerty mode we perform a lookup against this list. That’s literally it (for now anyway).</p>
+
+<p>There are two parts to every entry a trigger and an action.</p>
+
+<h1 id="triggers">Triggers</h1>
+<p>A trigger looks like this ‘LSD | LK | LW | LR’, the pipe character is used to glue the various keys together. The first letter is the side of the board, the second the steno key it corresponds to, the exception is LSUp, LSDown, and LFT (as LT is already defined). A list is provided below.</p>
+
+<p><img src="/img/georgi/defines.png" alt="georgi keymap" /></p>
+
+<p>We will talk about triggers in a little bit again.</p>
+
+<h1 id="actions">Actions</h1>
+<p>One a trigger is matched a action is taken. Any valid C code can be in there, but usually you’ll want to use the <strong>SEND()</strong> function to press keys from the <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md">QMK Keycode List</a> or use SEND_STRING() to <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md">output some text</a>. SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)</p>
+
+<h1 id="callers">Callers</h1>
+<p>There are two different callers that can respond to a chord P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom, on the first match it finds it runs the action and may halt further processing.</p>
+
+<p>P will execute a action and halt further processing. P only works on an exact match, so any partial chords are ignored.</p>
+
+<p>PJ will remove it’s trigger from a chord once it’s found, and add it’s presses to the the output. Typically PJ is used for modifiers such as shift, control, etc. Due to the nature of it, anything that relys on matching a chord that will be removed by a matching partial chord must be placed before any conflicting PJs. Due to this the typical structure is</p>
+
+<ul>
+  <li>Conflicting Chords</li>
+  <li>Modifiers/PJs</li>
+  <li>Whole bunch of Ps</li>
+</ul>
+
+<h1 id="layers">Layers</h1>
+<p>Unlike normal QMK boards, we can get away with only using a single layer and prefixing the chords. This is done by a few defines at the top like so <code class="highlighter-rouge">#define FUNCTION (LSU | LSD | ST3)</code>.</p>
+
+<h1 id="special-handling">Special Handling</h1>
+<p>The toggles that control switching modes and all that are hardcoded. To modify these you need to jigger sten.h.</p>
+
+<p>Have fun!</p>
+
+  </article>
+  
+  
+
+
+
+
+</div>
+
+        </div>
+        <div class="col-second">
+          <div class="col-box col-box-author">
+  <div class="col-box-title name">Germ</div>
+  <p>Keyboard Dan the keyboard man. Here we have random docs and guides for keyboards I've made.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/germ">GitHub</a>
+    
+    
+    
+    <a href="mailto:bernhardt@gmail.com">Email</a>
+    
+    <a href="https://twitter.com/gboardheavy">Twitter</a>
+    
+  </p>
+</div>
+
+<!--
+<div class="col-box">
+  <div class="col-box-title">Newest Posts</div>
+  <ul class="post-list">
+    
+      <li><a class="post-link" href="/Unboxing-Georgi">Unboxing Georgi</a></li>
+    
+      <li><a class="post-link" href="/Configuring-Georgi">Configuring Georgi</a></li>
+    
+      <li><a class="post-link" href="/Hacking-Georgi">Hacking Georgi</a></li>
+    
+      <li><a class="post-link" href="/Gergo-Setup">Gergo Setup</a></li>
+    
+  </ul>
+</div>-->
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">TOC</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+<div class="wrapper">
+&copy; g Heavy Industries
+</div>
+</footer>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+<script src="/js/easybook.js"></script>
+
+
+  </body>
+
+</html>

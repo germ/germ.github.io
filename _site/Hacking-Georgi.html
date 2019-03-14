@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hacking Georgi « g Heavy Industries</title>
+  <meta name="description" content="Hacking GeorgiAlright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here you’re going to need to know som...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/Hacking-Georgi">
+  <link rel="alternate" type="application/rss+xml" title="g Heavy Industries" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <div class="header-placeholder"></div>
+<header class="header">
+  <div class="wrapper">
+    <div id="sidebar-toggle">TOC</div>
+    <a class="site-title" href="/">g Heavy Industries</a>
+    <nav class="site-nav">
+      
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="col-main">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Hacking Georgi</h1>
+    <p class="post-meta">Mar 8, 2019</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="hacking-georgi">Hacking Georgi</h1>
+<p>Alright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here you’re going to need to know some QMK internals so <a href="https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk">give this excellent guide a read</a> and come on back.</p>
+
+<h1 id="how-georgi-do">How Georgi Do</h1>
+<p>Pop open sten.h so you have a reference to use. Everything that Georgi does is independant of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook <code class="highlighter-rouge">process_steno_user</code> to update this chord as keys come in and hook <code class="highlighter-rouge">send_steno_chord_user</code> to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).</p>
+
+<h2 id="cchord">cChord</h2>
+<p>This is just a bigass bitfield that is set in <code class="highlighter-rouge">process_steno_user</code> we can add keys to this easily but there are a total maximum of 32 possible states we can jam in there. To define your own codes append a entry to the ORDER enum, make a nice pretty #define for it and start adding entries to your keymap.</p>
+
+<h2 id="key-repeat">Key Repeat</h2>
+<p>Once the first button press comes in we start a timer and keep checking it in <code class="highlighter-rouge">matrix_scan_user</code>, if this timer expires we send the lookup the current chords and reset the timer.</p>
+
+<h2 id="mouse-keys">Mouse Keys</h2>
+<p>Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys">this list here</a></p>
+
+<h2 id="send">Send</h2>
+<p>Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code()</p>
+
+<h2 id="command-mode">Command mode</h2>
+<p>The buffer can store up to 20 different keypresses (if you somehow need more, update config.h). The way we do this is by</p>
+
+<p>In addition to the handling logic, the following functions are currently provided.</p>
+
+<p><strong>clickMouse</strong>: Send</p>
+
+
+  </article>
+  
+  
+
+
+
+
+</div>
+
+        </div>
+        <div class="col-second">
+          <div class="col-box col-box-author">
+  <div class="col-box-title name">Germ</div>
+  <p>Keyboard Dan the keyboard man. Here we have random docs and guides for keyboards I've made.</p>
+  <p class="contact">
+    
+    <a href="https://github.com/germ">GitHub</a>
+    
+    
+    
+    <a href="mailto:bernhardt@gmail.com">Email</a>
+    
+    <a href="https://twitter.com/gboardheavy">Twitter</a>
+    
+  </p>
+</div>
+
+<!--
+<div class="col-box">
+  <div class="col-box-title">Newest Posts</div>
+  <ul class="post-list">
+    
+      <li><a class="post-link" href="/Unboxing-Georgi">Unboxing Georgi</a></li>
+    
+      <li><a class="post-link" href="/Configuring-Georgi">Configuring Georgi</a></li>
+    
+      <li><a class="post-link" href="/Hacking-Georgi">Hacking Georgi</a></li>
+    
+      <li><a class="post-link" href="/Gergo-Setup">Gergo Setup</a></li>
+    
+  </ul>
+</div>-->
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">TOC</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+<div class="wrapper">
+&copy; g Heavy Industries
+</div>
+</footer>
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+<script src="/js/easybook.js"></script>
+
+
+  </body>
+
+</html>
