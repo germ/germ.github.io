@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2019 07:24:00 -0600</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2019 07:24:00 -0600</lastBuildDate>
+    <pubDate>Sat, 30 Mar 2019 13:14:00 -0600</pubDate>
+    <lastBuildDate>Sat, 30 Mar 2019 13:14:00 -0600</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -343,6 +343,42 @@ If you know what you’re doing just run this&lt;/p&gt;
         <guid isPermaLink="true">http://localhost:4000/Gergo-Setup</guid>
         
         <category>Gergo</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Georgi Firmwares</title>
+        <description>&lt;p&gt;&lt;strong&gt;Note: If you aren’t testing Beta Builds, you don’t want to flash these **
+**You can check what your current firmware is by pressing #-TSDZ in QWERTY mode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;alpha-02-frag-download&quot;&gt;Alpha 02, Frag: &lt;a href=&quot;/fw/georgi_0.02_Frag.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Fixed Gaming mode toggle
+- Seperated Num keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;alpha-01-ted-download&quot;&gt;Alpha 01, Ted: &lt;a href=&quot;/fw/georgi_0.01_Ted.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Initial Release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;how-to-flash&quot;&gt;How to flash&lt;/h1&gt;
+&lt;p&gt;Install QMK Toolbox, download your firmware and follow &lt;a href=&quot;https://www.youtube.com/watch?v=VR53Wo9Z960&quot;&gt;this guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-get-devel-contribute-or-hack-on-your-chords&quot;&gt;How to get devel, contribute or hack on your chords&lt;/h1&gt;
+&lt;p&gt;I maintain a branch on github for all my development work, this is where we submit PRs to QMK master from. To get it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/germ/qmk\_firmware.git
+git checkout georgi
+make georgi:default:dfu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you make changes, come up with funky layouts and all that. Submit a PR and we’ll merge it and bundle it together with our next push to master!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Mar 2019 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Georgi-Firmwares</link>
+        <guid isPermaLink="true">http://localhost:4000/Georgi-Firmwares</guid>
+        
+        <category>Georgi</category>
         
         
       </item>

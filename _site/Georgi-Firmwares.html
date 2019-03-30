@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About « g Heavy Industries</title>
-  <meta name="description" content="Guides for gBoards
-">
+  <title>Georgi Firmwares « g Heavy Industries</title>
+  <meta name="description" content="Note: If you aren’t testing Beta Builds, you don’t want to flash these ****You can check what your current firmware is by pressing #-TSDZ in QWERTY modeAlpha...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="canonical" href="http://localhost:4000/Georgi-Firmwares">
   <link rel="alternate" type="application/rss+xml" title="g Heavy Industries" href="http://localhost:4000/feed.xml" />
 </head>
 
@@ -36,18 +35,38 @@
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title">Georgi Firmwares</h1>
+    <p class="post-meta">Mar 7, 2019</p>
   </header>
 
   <article class="post-content">
-    <p>Welcome to this website!</p>
+    <p><strong>Note: If you aren’t testing Beta Builds, you don’t want to flash these **
+**You can check what your current firmware is by pressing #-TSDZ in QWERTY mode</strong></p>
 
-<blockquote>
-  <p>This website is using <a href="http://laobubu.net">laobubu</a>’s theme: <a href="https://github.com/laobubu/jekyll-theme-EasyBook">EasyBook</a></p>
-</blockquote>
+<h1 id="alpha-02-frag-download">Alpha 02, Frag: <a href="/fw/georgi_0.02_Frag.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Fixed Gaming mode toggle
+- Seperated Num keys
+</code></pre></div></div>
+
+<h1 id="alpha-01-ted-download">Alpha 01, Ted: <a href="/fw/georgi_0.01_Ted.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Initial Release
+</code></pre></div></div>
+
+<h1 id="how-to-flash">How to flash</h1>
+<p>Install QMK Toolbox, download your firmware and follow <a href="https://www.youtube.com/watch?v=VR53Wo9Z960">this guide</a></p>
+
+<h1 id="how-to-get-devel-contribute-or-hack-on-your-chords">How to get devel, contribute or hack on your chords</h1>
+<p>I maintain a branch on github for all my development work, this is where we submit PRs to QMK master from. To get it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/germ/qmk\_firmware.git
+git checkout georgi
+make georgi:default:dfu
+</code></pre></div></div>
+
+<p>If you make changes, come up with funky layouts and all that. Submit a PR and we’ll merge it and bundle it together with our next push to master!</p>
 
   </article>
-
+  
   
 
 
