@@ -68,7 +68,7 @@ Pressing this chord will move to the next avalible QMK layer (or do nothing if y
 # Configuration with Plover
 Unless in fallback mode, Georgi uses GeminiPR to communicate with Plover. Because of this you do not have to disable Plover to use Georgi as a keyboard. To set it up go into Configure > Machine Settings > GeminiPR and Scan for the device. Select the correct serial port from the dropdown.
 
-![Setup](/img/setup.png)
+![Setup](/img/georgi/setup.png)
 
 # Protips
 - Do yourself a favour and print off the [keyboard map](/img/georgi/keymap.png) and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!
