@@ -65,6 +65,11 @@ Note: There are a good number of alternative binds for modifiers and you can alw
 
 Pressing this chord will move to the next avalible QMK layer (or do nothing if you only have the steno layer). This layer acts like a traditional keyboard as opposed to stenotype. On this layer are your traditional WASD and a momentary layer for numbers/lower qwerty. To return to steno press the right number key.
 
+# Configuration with Plover
+Unless in fallback mode, Georgi uses GeminiPR to communicate with Plover. Because of this you do not have to disable Plover to use Georgi as a keyboard. To set it up go into Configure > Machine Settings > GeminiPR and Scan for the device. Select the correct serial port from the dropdown.
+
+![Setup](/img/setup.png)
+
 # Protips
 - Do yourself a favour and print off the [keyboard map](/img/georgi/keymap.png) and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!
 - You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.
