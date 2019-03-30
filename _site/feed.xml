@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Mar 2019 13:14:00 -0600</pubDate>
-    <lastBuildDate>Sat, 30 Mar 2019 13:14:00 -0600</lastBuildDate>
+    <pubDate>Sat, 30 Mar 2019 13:14:41 -0600</pubDate>
+    <lastBuildDate>Sat, 30 Mar 2019 13:14:41 -0600</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;In your package you should have a little note from me, the two halves of Georgi and any cables you may have ordered. If you didn’t order cables from me you will need a MiniUSB and a TRRS cable (Looks like a headphone connector, but has 4 gold bands instead of 3!).&lt;/p&gt;
 
-&lt;p&gt;Now go ahead and plug everything in! Be gentle one the cabling for the first few inserts as it can be a little tight until it wears in. Plug it into your computer and fire up Plover, open your machine settings, scan and select the correct serial port. That’s it!&lt;/p&gt;
+&lt;p&gt;Now go ahead and plug everything in! Be gentle on the cabling for the first few inserts as it can be a little tight until it wears in. Plug it into your computer, fire up Plover, open your machine settings, and scan and select the correct serial port. That’s it!&lt;/p&gt;
 
 &lt;p&gt;Your board is now ready for use with Plover, but you might accidentally toggle a few modes that are inside of Georgi, so let’s go over them.&lt;/p&gt;
 
@@ -32,17 +32,17 @@
 &lt;p&gt;The QWER button toggles QWERTY mode, if you ever accidentally can’t type you probably hit that.
 The SYMB button is a Momentary hold for symbols, you have to hold it while inserting them!&lt;/p&gt;
 
-&lt;p&gt;We’ll go on about that later but for now know that you can hold either of those in steno mode for fingerspelling of inserting symbols!&lt;/p&gt;
+&lt;p&gt;We’ll go on about that later but for now know that you can hold either of those in steno mode for fingerspelling or inserting symbols!&lt;/p&gt;
 
 &lt;p&gt;QWERTY mode is the main mode you’ll be in if you’re not doing steno 24/7. Here’s the keymap
 &lt;img src=&quot;/img/georgi/qwerty.png&quot; alt=&quot;qwerty layout&quot; /&gt;
-Pretty similar to a standard QWERTY eh? The markings along a crack denote pushing both of those keys in a chord, blue dot is for the four centered around it. The main difference between this and a normal board is that a traditional keyboard sends keypresses as they’re depressed, this one send the key only after the chord has been stroked!&lt;/p&gt;
+Pretty similar to a standard QWERTY eh? The markings along a crack denote pushing both of those keys in a chord, a blue dot is for the four centered around it. The main difference between this and a normal board is that a traditional keyboard sends keypresses as they’re depressed, this one sends the key only after the chord has been stroked!&lt;/p&gt;
 
 &lt;p&gt;It’s a little weird and may take a few days to get used to the timing difference. Stick with it. 
-The numbers can be accessed from QWER mode by simply holding num.&lt;/p&gt;
+The numbers can be accessed from QWER mode by simply holding num (BSPC).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/georgi/symbol.png&quot; alt=&quot;symbols layer&quot; /&gt;
-The symbols layer is accessed by holding down the Symbol key and cannot be switched to. Some of these keys can be shifted just like their QWERTY counterparts and to do that hold the right shift key! The number layer is accessed by holding the number key while pressing the key. Usually it’s easier to insert numbers directly from the QWERTY layer!&lt;/p&gt;
+The symbols layer is accessed by holding down the Symbol key and cannot be switched to. Some of these keys can be shifted just like their QWERTY counterparts and to do that you hold the right shift key! The number layer is accessed by holding the number key while pressing the key. Usually it’s easier to insert numbers directly from the QWERTY layer!&lt;/p&gt;
 
 &lt;p&gt;There are a few other ‘layers’ as well, the coloured keys are the prefix for the chord!
 There are some chords tucked away on the thumbs as well on the bottom :)
@@ -59,11 +59,11 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 
 &lt;h1 id=&quot;command-mode&quot;&gt;Command Mode&lt;/h1&gt;
 
-&lt;p&gt;Due to the size of the board, key combos can be a pain if there is a conflict. What do you do when the key you’re trying to chord overlaps with another that you need? Enter Command mode. Command mode buffers all of the keys that are pressed while it’s active, once you exit command mode the keys are all pressed down, and then released in one go. So inserting say ‘Ctrl+Shift+S’ could bbe done in the following way ‘Command Mode/Ctrl/Shift/S/Command Mode’.&lt;/p&gt;
+&lt;p&gt;Due to the size of the board, key combos can be a pain if there is a conflict. What do you do when the key you’re trying to chord overlaps with another that you need? Enter Command mode. Command mode buffers all of the keys that are pressed while it’s active; once you exit command mode the keys are all pressed down, and then released in one go. So inserting say ‘Ctrl+Shift+S’ could be done in the following way ‘Command Mode/Ctrl/Shift/S/Command Mode’.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/georgi/command.png&quot; alt=&quot;Command&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Note: There are a good number of alternative binds for modifiers and you can always add definitions to your firmware! If you find a bind that you’re using frequently, don’t just whack it in over and over again in command mode, add it to your keyboard, find a alternate way to stroke it or use plover to bridge the gap!&lt;/p&gt;
+&lt;p&gt;Note: There are a good number of alternative binds for modifiers and you can always add definitions to your firmware! If you find a bind that you’re using frequently, don’t just whack it in over and over again in command mode, add it to your keyboard, find an alternate way to stroke it or use plover to bridge the gap!&lt;/p&gt;
 
 &lt;h1 id=&quot;entering-qmk-gaming-mode&quot;&gt;Entering QMK (Gaming mode)&lt;/h1&gt;
 
@@ -74,9 +74,9 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 &lt;h1 id=&quot;protips&quot;&gt;Protips&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Do yourself a favour and print off the &lt;a href=&quot;/img/georgi/keymap.png&quot;&gt;keyboard map&lt;/a&gt; and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!&lt;/li&gt;
-  &lt;li&gt;You can do temporary plover from QWERTY, If you hold the STENO button in your chord, Use this for sending shortcuts to plover for binds and other stuff.&lt;/li&gt;
-  &lt;li&gt;Similarity you can do temporary QWERTY fingerspells from steno! Hold the steno button while you’re typing.&lt;/li&gt;
-  &lt;li&gt;Keyup will take time to get used to! Seriously, you’re used to typing on a traditional keyboard, this will mess you up for a bit.&lt;/li&gt;
+  &lt;li&gt;You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.&lt;/li&gt;
+  &lt;li&gt;Similarly you can do temporary QWERTY fingerspells from steno! Hold the STENO button while you’re typing.&lt;/li&gt;
+  &lt;li&gt;Keyup will take time to get used to! Seriously, since you’re used to typing on a traditional keyboard, this will mess you up for a bit.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 10 Mar 2019 00:00:00 -0600</pubDate>
@@ -92,10 +92,10 @@ There are some chords tucked away on the thumbs as well on the bottom :)
         <title>Configuring Georgi</title>
         <description>&lt;h1 id=&quot;georgi-configuration&quot;&gt;Georgi Configuration&lt;/h1&gt;
 
-&lt;p&gt;Awesome, now that you’ve figured out the convoluded shitshow that is Georgi, let’s get on making it usable for you! A little foreword is necessary here, if you’ve used QMK before, Georgi does some very unQMK things.&lt;/p&gt;
+&lt;p&gt;Awesome, now that you’ve figured out the convoluted shitshow that is Georgi, let’s get on making it usable for you! A little forward is necessary here, if you’ve used QMK before, Georgi does some very unQMK things.&lt;/p&gt;
 
 &lt;h1 id=&quot;the-future&quot;&gt;The Future&lt;/h1&gt;
-&lt;p&gt;We’re currently working with the QMK team to develop a front end that is compatible with the &lt;a href=&quot;http://config.qmk.fm&quot;&gt;QMK configurator&lt;/a&gt;. Once this is done configuring Georgi or other steno boards from the browser will be possible. Until then, we need to set up the build environment. &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md&quot;&gt;So give this a diddle and come on back.&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We’re currently working with the QMK team to develop a front end that is compatible with the &lt;a href=&quot;http://config.qmk.fm&quot;&gt;QMK configurator&lt;/a&gt;. Once this is done, configuring Georgi or other steno boards from the browser will be possible. Until then, we need to set up the build environment. &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md&quot;&gt;So give this a diddle and come on back.&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;structure-of-a-keymap&quot;&gt;Structure of a keymap&lt;/h1&gt;
 &lt;p&gt;Good on you for getting that all set up!&lt;/p&gt;
@@ -111,17 +111,17 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 
 &lt;p&gt;&lt;img src=&quot;/img/georgi/defines.png&quot; alt=&quot;georgi keymap&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We will talk about triggers in a little bit again.&lt;/p&gt;
+&lt;p&gt;We will talk about triggers in a little bit again later on.&lt;/p&gt;
 
 &lt;h1 id=&quot;actions&quot;&gt;Actions&lt;/h1&gt;
-&lt;p&gt;One a trigger is matched a action is taken. Any valid C code can be in there, but usually you’ll want to use the &lt;strong&gt;SEND()&lt;/strong&gt; function to press keys from the &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md&quot;&gt;QMK Keycode List&lt;/a&gt; or use SEND_STRING() to &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md&quot;&gt;output some text&lt;/a&gt;. SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)&lt;/p&gt;
+&lt;p&gt;One a trigger is matched, an action is taken. Any valid C code can be in there, but usually you’ll want to use the &lt;strong&gt;SEND()&lt;/strong&gt; function to press keys from the &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md&quot;&gt;QMK Keycode List&lt;/a&gt; or use SEND_STRING() to &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md&quot;&gt;output some text&lt;/a&gt;. SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)&lt;/p&gt;
 
 &lt;h1 id=&quot;callers&quot;&gt;Callers&lt;/h1&gt;
-&lt;p&gt;There are two different callers that can respond to a chord P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom, on the first match it finds it runs the action and may halt further processing.&lt;/p&gt;
+&lt;p&gt;There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom, on the first match it finds it runs the action and may halt further processing.&lt;/p&gt;
 
-&lt;p&gt;P will execute a action and halt further processing. P only works on an exact match, so any partial chords are ignored.&lt;/p&gt;
+&lt;p&gt;P will execute an action and halt further processing. P only works on an exact match, so any partial chords are ignored.&lt;/p&gt;
 
-&lt;p&gt;PJ will remove it’s trigger from a chord once it’s found, and add it’s presses to the the output. Typically PJ is used for modifiers such as shift, control, etc. Due to the nature of it, anything that relys on matching a chord that will be removed by a matching partial chord must be placed before any conflicting PJs. Due to this the typical structure is&lt;/p&gt;
+&lt;p&gt;PJ will remove it’s trigger from a chord once it’s found, and add it’s presses to the the output. Typically PJ is used for modifiers such as shift, control, etc. Due to the nature of it, anything that relies on matching a chord that will be removed by a matching partial chord must be placed before any conflicting PJs. Due to this the typical structure is:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Conflicting Chords&lt;/li&gt;
@@ -130,10 +130,13 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;layers&quot;&gt;Layers&lt;/h1&gt;
-&lt;p&gt;Unlike normal QMK boards, we can get away with only using a single layer and prefixing the chords. This is done by a few defines at the top like so &lt;code class=&quot;highlighter-rouge&quot;&gt;#define FUNCTION (LSU | LSD | ST3)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Unlike normal QMK boards, we can get away with only using a single layer and prefixing defined chords as “layers”. This is done by a few defines at the top like so &lt;code class=&quot;highlighter-rouge&quot;&gt;#define FUNCTION (LSU | LSD | ST3)&lt;/code&gt;. This will create a pseudo layer prefix chord that we can use elsewhere, for example: &lt;code class=&quot;highlighter-rouge&quot;&gt;P(FUNCTION | ST4, SEND_STRING(&quot;TEST&quot;));&lt;/code&gt; would send “TEST” when LSU, LSD, ST3, and ST4 are pressed. This is used in the default keymap for layers like Media and Movement.&lt;/p&gt;
 
 &lt;h1 id=&quot;special-handling&quot;&gt;Special Handling&lt;/h1&gt;
 &lt;p&gt;The toggles that control switching modes and all that are hardcoded. To modify these you need to jigger sten.h.&lt;/p&gt;
+
+&lt;h1 id=&quot;building&quot;&gt;Building&lt;/h1&gt;
+&lt;p&gt;Once your changes are complete, you can build your hex file by simply running &lt;code class=&quot;highlighter-rouge&quot;&gt;make georgi&lt;/code&gt; from the root directory of your QMK firmware folder, this will compile and build hex files for all keymaps in the georgi folder. You can specify a keymap to build like so: &lt;code class=&quot;highlighter-rouge&quot;&gt;make georgi:default&lt;/code&gt;, where default is the name of the map to build.&lt;/p&gt;
 
 &lt;p&gt;Have fun!&lt;/p&gt;
 </description>
@@ -149,16 +152,16 @@ There are some chords tucked away on the thumbs as well on the bottom :)
       <item>
         <title>Hacking Georgi</title>
         <description>&lt;h1 id=&quot;hacking-georgi&quot;&gt;Hacking Georgi&lt;/h1&gt;
-&lt;p&gt;Alright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here you’re going to need to know some QMK internals so &lt;a href=&quot;https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk&quot;&gt;give this excellent guide a read&lt;/a&gt; and come on back.&lt;/p&gt;
+&lt;p&gt;Alright, so you’ve finally found something that you can’t do from the default firmware. A bit of heads up here, you’re going to need to know some QMK internals so &lt;a href=&quot;https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk&quot;&gt;give this excellent guide a read&lt;/a&gt; and come on back.&lt;/p&gt;
 
 &lt;h3 id=&quot;how-georgi-do&quot;&gt;How Georgi Do&lt;/h3&gt;
-&lt;p&gt;Pop open sten.h so you have a reference to use. Everything that Georgi does is independant of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; to update this chord as keys come in and hook &lt;code class=&quot;highlighter-rouge&quot;&gt;send_steno_chord_user&lt;/code&gt; to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).&lt;/p&gt;
+&lt;p&gt;Pop open sten.h so you have a reference to use. Everything that Georgi does is independent of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; to update this chord as keys come in and hook &lt;code class=&quot;highlighter-rouge&quot;&gt;send_steno_chord_user&lt;/code&gt; to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).&lt;/p&gt;
 
 &lt;h3 id=&quot;cchord&quot;&gt;cChord&lt;/h3&gt;
-&lt;p&gt;This is just a bigass bitfield that is set in &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; we can add keys to this easily but there are a total maximum of 32 possible states we can jam in there. To define your own codes append a entry to the ORDER enum, make a nice pretty #define for it and start adding entries to your keymap.&lt;/p&gt;
+&lt;p&gt;This is just a bigass bitfield that is set in &lt;code class=&quot;highlighter-rouge&quot;&gt;process_steno_user&lt;/code&gt; we can add keys to this easily but there are a total maximum of 32 possible states we can jam in there. To define your own codes, append an entry to the ORDER enum, make a nice pretty #define for it, and start adding entries to your keymap.&lt;/p&gt;
 
 &lt;h3 id=&quot;key-repeat&quot;&gt;Key Repeat&lt;/h3&gt;
-&lt;p&gt;Once the first button press comes in we start a timer and keep checking it in &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix_scan_user&lt;/code&gt;, if this timer expires we send the lookup the current chords and reset the timer.&lt;/p&gt;
+&lt;p&gt;Once the first button press comes in we start a timer and keep checking it in &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix_scan_user&lt;/code&gt;, if this timer expires we send the lookup the current chords and reset the timer. You can adjust this timer by changing the REP_DELAY #define in sten.h.&lt;/p&gt;
 
 &lt;h3 id=&quot;mouse-keys&quot;&gt;Mouse Keys&lt;/h3&gt;
 &lt;p&gt;Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys&quot;&gt;this list here&lt;/a&gt;. We do this with the clickMouse() function, if the chord is too short to register a repeat a single click is generated.&lt;/p&gt;
@@ -167,15 +170,15 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 &lt;p&gt;Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code() Quantum Codes cannot be used here. You need to use SEND otherwise command mode won’t work!&lt;/p&gt;
 
 &lt;h3 id=&quot;command-mode&quot;&gt;Command mode&lt;/h3&gt;
-&lt;p&gt;The buffer can store up to 20 different keypresses (if you somehow need more, update &lt;strong&gt;REP_DELAY&lt;/strong&gt;). The way we do this is by wrapping &lt;strong&gt;register_code()&lt;/strong&gt; with send and replaying the buffer depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won’t be in there.&lt;/p&gt;
+&lt;p&gt;The buffer can store up to 20 different keypresses (if you somehow need more, update &lt;strong&gt;REP_DELAY&lt;/strong&gt;). The way we do this is by wrapping &lt;strong&gt;register_code()&lt;/strong&gt; with send and replaying the buffer, depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won’t be in there.&lt;/p&gt;
 
 &lt;h3 id=&quot;qwerty-fallback&quot;&gt;QWERTY Fallback&lt;/h3&gt;
-&lt;p&gt;proessFakeSteno() simply maps chords to NKRO Plover as a fallback mode. Ideally we would have a datastructure for various dictionaries but switching the called look up table seems to be fine. This is a young project, submit a PR.&lt;/p&gt;
+&lt;p&gt;proessFakeSteno() simply maps chords to NKRO Plover as a fallback mode. Ideally we would have a datastructure for various dictionaries but switching the called lookup table seems to be fine. This is a young project, submit a PR.&lt;/p&gt;
 
 &lt;h3 id=&quot;adding-functionality&quot;&gt;Adding functionality&lt;/h3&gt;
-&lt;p&gt;All of the logic happens in &lt;strong&gt;process_steno_chord_user&lt;/strong&gt;, this should be your main place to add/augment functionality. In here you can preprocess chords before passing them off for handling, enable toggles and disable features, etc. You need to remember that just like in any dictionary, there is a order that everything is evaluated in, so be careful.&lt;/p&gt;
+&lt;p&gt;All of the logic happens in &lt;strong&gt;process_steno_chord_user&lt;/strong&gt;, this should be your main place to add/augment functionality. In here you can preprocess chords before passing them off for handling, enable toggles, disable features, etc. You need to remember that just like in any dictionary, there is a order that everything is evaluated in, so be careful.&lt;/p&gt;
 
-&lt;p&gt;Two exit points are provided to jump to, &lt;strong&gt;out&lt;/strong&gt; which halts further processing and cleans up, and &lt;strong&gt;steno&lt;/strong&gt; which will clean up and pass of the chords to Plover. Local gotos are okay, get at me.&lt;/p&gt;
+&lt;p&gt;Two exit points are provided to jump to, &lt;strong&gt;out&lt;/strong&gt; which halts further processing and cleans up, and &lt;strong&gt;steno&lt;/strong&gt; which will clean up and pass off the chords to Plover. Local gotos are okay, get at me.&lt;/p&gt;
 
 &lt;h3 id=&quot;other-qmk-jazz&quot;&gt;Other QMK jazz&lt;/h3&gt;
 &lt;p&gt;There’s a ton of stuff that can be leveraged here. Take a look through the tmk/common folder for some ideas and weird whacky keyboards you see around. This is a computer, make it do weird shit! If you need a hand reach out, I’ll warn you I suck at steno though.&lt;/p&gt;
