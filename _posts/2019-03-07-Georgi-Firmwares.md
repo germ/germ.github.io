@@ -7,7 +7,11 @@ tags: [Georgi]
 
 **Note: If you aren't testing Beta Builds, you don't want to flash these **
 **You can check what your current firmware is by pressing #-TSDZ in QWERTY mode**
-
+# Alpha 03, TomatoSoup: [Download](/fw/georgi_0.03_TomatoSoup.hex)
+	- Major QWERTY mode improvements, now handles continious typing
+	- Optimized code size for extra space
+	- Reworked chord processing backend
+	- Removed duplicate chords
 
 # Alpha 02, Frag: [Download](/fw/georgi_0.02_Frag.hex)
 	- Fixed Gaming mode toggle
