@@ -7,6 +7,12 @@ tags: [Georgi]
 
 **Note: If you aren't testing Beta Builds, you don't want to flash these **
 **You can check what your current firmware is by pressing #-TSDZ in QWERTY mode**
+# Release Candidate 01, Wilfred : [Download](fw/georgi_RC01_Wilfred.hex)
+	- Macro cleanup
+	- Compiled in layer support
+	- Added sticky-bits
+	- Added compile options for FW size
+
 # Alpha 03, TomatoSoup: [Download](/fw/georgi_0.03_TomatoSoup.hex)
 	- Major QWERTY mode improvements, now handles continious typing
 	- Optimized code size for extra space
