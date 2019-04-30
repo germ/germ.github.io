@@ -1,0 +1,37 @@
+<p><strong>Note: If you aren’t testing Beta Builds, you don’t want to flash these **
+**You can check what your current firmware is by pressing #-TSDZ in QWERTY mode</strong></p>
+<h1 id="release-candidate-01-wilfred--download">Release Candidate 01, Wilfred : <a href="fw/georgi_RC01_Wilfred.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Macro cleanup
+- Compiled in layer support
+- Added sticky-bits
+- Added compile options for FW size
+</code></pre></div></div>
+
+<h1 id="alpha-03-tomatosoup-download">Alpha 03, TomatoSoup: <a href="/fw/georgi_0.03_TomatoSoup.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Major QWERTY mode improvements, now handles continious typing
+- Optimized code size for extra space
+- Reworked chord processing backend
+- Removed duplicate chords
+</code></pre></div></div>
+
+<h1 id="alpha-02-frag-download">Alpha 02, Frag: <a href="/fw/georgi_0.02_Frag.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Fixed Gaming mode toggle
+- Seperated Num keys
+</code></pre></div></div>
+
+<h1 id="alpha-01-ted-download">Alpha 01, Ted: <a href="/fw/georgi_0.01_Ted.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Initial Release
+</code></pre></div></div>
+
+<h1 id="how-to-flash">How to flash</h1>
+<p>Install QMK Toolbox, download your firmware and follow <a href="https://www.youtube.com/watch?v=VR53Wo9Z960">this guide</a></p>
+
+<h1 id="how-to-get-devel-contribute-or-hack-on-your-chords">How to get devel, contribute or hack on your chords</h1>
+<p>I maintain a branch on github for all my development work, this is where we submit PRs to QMK master from. To get it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/germ/qmk\_firmware.git
+git checkout georgi
+make georgi:default:dfu
+</code></pre></div></div>
+
+<p>If you make changes, come up with funky layouts and all that. Submit a PR and we’ll merge it and bundle it together with our next push to master!</p>

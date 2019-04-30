@@ -2,6 +2,14 @@
 <html>
 
   <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79595009-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79595009-2');
+</script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +47,54 @@
 
   <ul class="post-list">
     
+	<h1>Butterstick</h1>
+		
+			  <li>
+				<h3>
+					<a class="post-link" href="/Meet-Butter-Stick">Meeting Butterstick</a>
+				</h3>
+				<div class="post-excerpt">
+						Typing in the kitchen quickstart
+				</div>
+				<!--<div class="post-meta">Mar 11, 2019</div>
+				<div class="post-excerpt">
+				  <h1 id="unboxing-butterstick">Unboxing Butterstick</h1>
+<p>Thanks for buying one of these little guys, it’s a little wonky but I’m sure you’ll have some fun with it!</p>
+
+<p>In your package you should have recieved a populated PCB ready for your switches and caps. Go ahead and get those installed if you have not!
+A note, try and use lighter switches then you would normally. Gateron Clears are a good start or any MX spring swapped down to 20cN should be perfect.</p>
+
+<h1 id="modes">Modes</h1>
+<p>There is a ton of overlap with the Georgi firmware, after you get your board set up and start mucking about with your FW go read <a href="/Hacking-Georgi/">Hacking Georgi</a>.</p>
+
+<p>This is the default layout, for keys inbetween press both keys to trigger it. For the blue circles, all four in that area.
+<img src="/img/butterstick/layout.png" alt="default layout" /></p>
+
+<p>There are a few other ‘layers’ as well, the coloured keys are the prefix for the chord!
+<img src="/img/butterstick/layers.png" alt="Layers" /></p>
+
+<h1 id="command-mode">Command Mode</h1>
+
+<p>Due to the size of the board, key combos can be a pain if there is a conflict. What do you do when the key you’re trying to chord overlaps with another that you need? Enter Command mode. Command mode buffers all of the keys that are pressed while it’s active; once you exit command mode the keys are all pressed down, and then released in one go. So inserting say ‘Ctrl+Shift+S’ could be done in the following way ‘Command Mode/Ctrl/Shift/S/Command Mode’.</p>
+
+<p>Note: There are a good number of alternative binds for modifiers and you can always add definitions to your firmware! If you find a bind that you’re using frequently, don’t just whack it in over and over again in command mode, add it to your keyboard!</p>
+
+<h1 id="entering-qmk-gaming-mode">Entering QMK (Gaming mode)</h1>
+
+<p>Pressing this chord will move to the next avalible QMK layer (or do nothing if you only have the base layer). This layer acts like a traditional keyboard as opposed to stenotype. On this layer are your traditional WASD. You may want to modify this to suit your gaming needs. To exit back to normal mode press the right bottom corner button.</p>
+
+<h1 id="protips">Protips</h1>
+<ul>
+  <li>Do yourself a favour and print off the <a href="/img/butterstick/lalout.png">keyboard map</a> and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!</li>
+</ul>
+
+				  <p>
+					<a class="post-link" href="/Meet-Butter-Stick">Read More &raquo;</a>
+				  </p>
+				</div>-->
+			  </li>
+			
+		
 	<h1>Gergo</h1>
 		
 			  <li>
@@ -274,12 +330,16 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 
 <p>Pressing this chord will move to the next avalible QMK layer (or do nothing if you only have the steno layer). This layer acts like a traditional keyboard as opposed to stenotype. On this layer are your traditional WASD and a momentary layer for numbers/lower qwerty. To return to steno press the right number key.</p>
 
+<h1 id="configuration-with-plover">Configuration with Plover</h1>
+<p>Unless in fallback mode, Georgi uses GeminiPR to communicate with Plover. Because of this you do not have to disable Plover to use Georgi as a keyboard. To set it up go into Configure &gt; Machine Settings &gt; GeminiPR and Scan for the device. Select the correct serial port from the dropdown.</p>
+
+<p><img src="/img/georgi/setup.png" alt="Setup" /></p>
+
 <h1 id="protips">Protips</h1>
 <ul>
   <li>Do yourself a favour and print off the <a href="/img/georgi/keymap.png">keyboard map</a> and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!</li>
   <li>You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.</li>
   <li>Similarly you can do temporary QWERTY fingerspells from steno! Hold the STENO button while you’re typing.</li>
-  <li>Keyup will take time to get used to! Seriously, since you’re used to typing on a traditional keyboard, this will mess you up for a bit.</li>
 </ul>
 
 				  <p>
@@ -374,11 +434,17 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 <h3 id="key-repeat">Key Repeat</h3>
 <p>Once the first button press comes in we start a timer and keep checking it in <code class="highlighter-rouge">matrix_scan_user</code>, if this timer expires we send the lookup the current chords and reset the timer. You can adjust this timer by changing the REP_DELAY #define in sten.h.</p>
 
-<h3 id="mouse-keys">Mouse Keys</h3>
-<p>Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys">this list here</a>. We do this with the clickMouse() function, if the chord is too short to register a repeat a single click is generated.</p>
+<h3 id="click_mouse">CLICK_MOUSE()</h3>
+<p>Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys">this list here</a>. If the chord is too short to register a repeat a single click is generated.</p>
 
-<h3 id="send">Send</h3>
+<h3 id="send">SEND()</h3>
 <p>Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code() Quantum Codes cannot be used here. You need to use SEND otherwise command mode won’t work!</p>
+
+<h3 id="set_sticky">SET_STICKY()</h3>
+<p>When this chord is matched a sticky bit is set in cChord. The usual way you would use this is with the codes RES1 and RES2. When the sticky bit is set cChord will process all incoming chords with this. Use cases are similar to changing the default layer in QMK. Using sticky bits you could toggle between QWERTY and WORKMAN and whatnot. To clear any stickybits that have been set, pass 0 when calling it.</p>
+
+<h3 id="switch_layer">SWITCH_LAYER()</h3>
+<p>This is a helper that jumps to the specified QMK layer, if it exists. Returning to the default layer is left as a excercise to the reader.</p>
 
 <h3 id="command-mode">Command mode</h3>
 <p>The buffer can store up to 20 different keypresses (if you somehow need more, update <strong>REP_DELAY</strong>). The way we do this is by wrapping <strong>register_code()</strong> with send and replaying the buffer, depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won’t be in there.</p>
@@ -411,6 +477,19 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 				<div class="post-excerpt">
 				  <p><strong>Note: If you aren’t testing Beta Builds, you don’t want to flash these **
 **You can check what your current firmware is by pressing #-TSDZ in QWERTY mode</strong></p>
+<h1 id="release-candidate-01-wilfred--download">Release Candidate 01, Wilfred : <a href="fw/georgi_RC01_Wilfred.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Macro cleanup
+- Compiled in layer support
+- Added sticky-bits
+- Added compile options for FW size
+</code></pre></div></div>
+
+<h1 id="alpha-03-tomatosoup-download">Alpha 03, TomatoSoup: <a href="/fw/georgi_0.03_TomatoSoup.hex">Download</a></h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Major QWERTY mode improvements, now handles continious typing
+- Optimized code size for extra space
+- Reworked chord processing backend
+- Removed duplicate chords
+</code></pre></div></div>
 
 <h1 id="alpha-02-frag-download">Alpha 02, Frag: <a href="/fw/georgi_0.02_Frag.hex">Download</a></h1>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Fixed Gaming mode toggle
@@ -479,6 +558,8 @@ make georgi:default:dfu
   <div class="col-box-title">Newest Posts</div>
   <ul class="post-list">
     
+      <li><a class="post-link" href="/Meet-Butter-Stick">Meeting Butterstick</a></li>
+    
       <li><a class="post-link" href="/Unboxing-Georgi">Unboxing Georgi</a></li>
     
       <li><a class="post-link" href="/Configuring-Georgi">Configuring Georgi</a></li>
@@ -486,8 +567,6 @@ make georgi:default:dfu
       <li><a class="post-link" href="/Hacking-Georgi">Hacking Georgi</a></li>
     
       <li><a class="post-link" href="/Gergo-Setup">Gergo Setup</a></li>
-    
-      <li><a class="post-link" href="/Georgi-Firmwares">Georgi Firmwares</a></li>
     
   </ul>
 </div>-->

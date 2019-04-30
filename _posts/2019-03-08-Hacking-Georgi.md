@@ -17,11 +17,17 @@ This is just a bigass bitfield that is set in `process_steno_user` we can add ke
 ### Key Repeat
 Once the first button press comes in we start a timer and keep checking it in `matrix_scan_user`, if this timer expires we send the lookup the current chords and reset the timer. You can adjust this timer by changing the REP_DELAY #define in sten.h.
 
-### Mouse Keys
-Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from [this list here](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys). We do this with the clickMouse() function, if the chord is too short to register a repeat a single click is generated.
+### CLICK_MOUSE()
+Mousekeys are done using the repeat mechanism, if a mousepress is sent it will remain in a down state until the chord is sent. The button that is clicked is selected from [this list here](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md#mouse-keys). If the chord is too short to register a repeat a single click is generated.
 
-### Send
+### SEND()
 Send is just a light wrapper around register_code(), this is needed to buffer if we are in command mode. Just like register_code() Quantum Codes cannot be used here. You need to use SEND otherwise command mode won't work!
+
+### SET_STICKY()
+When this chord is matched a sticky bit is set in cChord. The usual way you would use this is with the codes RES1 and RES2. When the sticky bit is set cChord will process all incoming chords with this. Use cases are similar to changing the default layer in QMK. Using sticky bits you could toggle between QWERTY and WORKMAN and whatnot. To clear any stickybits that have been set, pass 0 when calling it.
+
+### SWITCH_LAYER()
+This is a helper that jumps to the specified QMK layer, if it exists. Returning to the default layer is left as a excercise to the reader.
 
 ### Command mode
 The buffer can store up to 20 different keypresses (if you somehow need more, update **REP_DELAY**). The way we do this is by wrapping **register_code()** with send and replaying the buffer, depressing every key in the sequence before key up. This only applies to wrapped codes so things like mouse clicks and custom code won't be in there.

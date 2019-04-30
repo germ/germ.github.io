@@ -74,4 +74,3 @@ Unless in fallback mode, Georgi uses GeminiPR to communicate with Plover. Becaus
 - Do yourself a favour and print off the [keyboard map](/img/georgi/keymap.png) and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!
 - You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.
 - Similarly you can do temporary QWERTY fingerspells from steno! Hold the STENO button while you're typing.
-- Keyup will take time to get used to! Seriously, since you're used to typing on a traditional keyboard, this will mess you up for a bit.
