@@ -15,6 +15,7 @@ A note, try and use lighter switches then you would normally. Gateron Clears are
 There is a ton of overlap with the Georgi firmware, after you get your board set up and start mucking about with your FW go read [Hacking Georgi](/Hacking-Georgi/).
 
 This is the default layout, for keys inbetween press both keys to trigger it. For the blue circles, all four in that area.
+### Update: Backspace is TBNM! Forgot to include it in the maps
 ![default layout](/img/butterstick/layout.png)
 
 There are a few other 'layers' as well, the coloured keys are the prefix for the chord!
