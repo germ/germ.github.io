@@ -19,6 +19,8 @@ After that skip on down to the Configuring Gergo section.
 
 Gergo: Kit Assembly
 
+### NOTE: There are some differences between Gergo: Wired (Black PCB) and Gergo: Distortion and Protocol (Blue PCB), these are noted below!
+
 IMAGES HERE: [https://github.com/germ/GergoDocs](https://github.com/germ/GergoDocs)
 
 First and formost, I need you to take a nice deep breath. This is going to look like a lot and can be daunting! Trust me with a bit of videos and patience you can do it. Remember, this is a learning experience!
@@ -37,6 +39,8 @@ We're going to work easiest to hardest, so let's start with the diodes. Grab the
 
 Just line up the line on the top of your diode with the square pad on your PCB. After you have it lined up, heat the tinned pad slide the diode into place and remove the iron. Give it a second to cool and solder the other side. Easy!
 
+**Blue PCBs:** The diodes are in three lines towards the sides of the board. All your diodes will go here instead of under every switch.
+
 **MDF PROTIP**: Tin all the square pads before you start. Then heat and slide the diodes into position, finally finish up on the other side!
 
 ### Caps
@@ -45,6 +49,8 @@ Next up are the capacitors, They're the little brown guys with no markings. You 
 2x 22pf,  1x 1uf, 5x0.1uF
 
 The two 22pF caps are labelled and located by the Oscillator, 1uF by the MCU and labelled, and the reset are dotted around the board. Most are labelled 0.1uF, If you see C5 or C6, those are also 0.1uF caps. Install them just like you did with the diodes, orientation does not matter.
+
+**Blue PCBs:** The 0.1uF Caps are above the MCU in a line and the other is labelled at the top of your board.
 
 ### Resistors
 Next up resistors, you've got 3 kinds 10K (103), 2.2K (222) 22Ohms  (22R0). Take a look on the silk screen for them and whack em in there! They will all be near the MCU or  USB port.If you see R1 on your board that's supposed to be a 2.2K resistor!
@@ -55,7 +61,7 @@ The little recangular guy with four pads is the oscillator, it's a bit of a pain
 ### ICs
 Lastly the hard stuff! Remember if you mess up, you can order more electronics from the store!
 
-So you should have a few components left, we're going to start with the MCP (rectangular one). There is a small circle on your PCB and a circle on the IC. Line these up.
+So you should have a few components left, we're going to start with the MCP (rectangular one). There is a small circle on your PCB and a circle on the IC. Line these up, if it's missing place the dot towards the top!
 
 Tin a pad on the top corner of it's pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it's aligned do the same to a corner pin on the other side of the board. Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next. Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.
 
@@ -64,16 +70,20 @@ Repeat the same on the MCU. There was a oversight on the silkscreen a bit of bac
 ### Connectors
 Assuming you've done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch. Use flux for  the MiniUSB port and be careful of bridging. If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters. It just makes getting into position much easier. Be sure to wick out any solder bridges.
 
+**Note For Wired/Distortion:** Really glob that solder on there, pull up along the body of the jack to provide a bit more support. 
+
 ### Programming/Testing
 Alright, we're in the homestretch. Go off and install these [drivers](https://sourceforge.net/projects/dfu-programmer/files/dfu-programmer/0.7.0/) or install dfu-programmer from your repo. We're going to need them after we run through a checklist.
 
 1) Are there any empty pads on the board?
 
-2 ) Can you see any solder bridges between pins?
+2) Can you see any solder bridges between pins?
 
-3)  Unsoldered all pads on any component?
+3) Unsoldered all pads on any component?
 
 4) Any diodes in the wrong orientation?
+
+5) **Blue PCBs**, if you hold the board up to a bright light can you see any bridges on the ICs?
 
 If you answered No to every one of those you're ready to test! Install those drivers and reboot if you're a Windows user. If you've done everything correctly you should see a Atmel device in Device Manager! Linux users: Run lsusb as root ( watch -n 1 lsusb ). If so, congrats, you've done it. Proceed to Install your switches and proceed to configuring Gergo!
 

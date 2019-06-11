@@ -15,6 +15,7 @@ Now go ahead and plug everything in! Be gentle on the cabling for the first few 
 Your board is now ready for use with Plover, but you might accidentally toggle a few modes that are inside of Georgi, so let's go over them.
 
 **Remember! If you have issues, unplugging your board and plugging it in will reset to a clean state.**
+**If using a non rev2 or higher board, be gentle on the TRRS jacks!**
 
 # Modes
 Georgi has three operation modes: Steno, QWERTY and Command.
