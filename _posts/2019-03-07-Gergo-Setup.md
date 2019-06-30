@@ -72,6 +72,8 @@ Assuming you've done everything correctly all that is left is the simple stuff! 
 
 **Note For Wired/Distortion:** Really glob that solder on there, pull up along the body of the jack to provide a bit more support. 
 
+**Blue PCBS: The reset may have two plastic pins under it, if it does clip them off before attaching the reset button**
+
 ### Programming/Testing
 Alright, we're in the homestretch. Go off and install these [drivers](https://sourceforge.net/projects/dfu-programmer/files/dfu-programmer/0.7.0/) or install dfu-programmer from your repo. We're going to need them after we run through a checklist.
 
