@@ -71,6 +71,8 @@ Unless in fallback mode, Georgi uses GeminiPR to communicate with Plover. Becaus
 
 ![Setup](/img/georgi/setup.png)
 
+**[In addition you may need to install these drivers](https://github.com/qmk/qmk_driver_installer/releases/download/v1.01/qmk_driver_installer.exe)**
+
 # Protips
 - Do yourself a favour and print off the [keyboard map](/img/georgi/keymap.pdf) and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it's going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!
 - You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.
