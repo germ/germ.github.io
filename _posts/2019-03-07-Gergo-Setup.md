@@ -20,6 +20,7 @@ After that skip on down to the Configuring Gergo section.
 Gergo: Kit Assembly
 
 ### NOTE: There are some differences between Gergo: Wired (Black PCB) and Gergo: Distortion and Protocol (Blue PCB), these are noted below!
+### NOTE: You can enter programming mode by holding the Rightmost-Lower 1.5u (Right Shift) and plugging Gergo in (or pressing the reset)
 
 IMAGES HERE: [https://github.com/germ/GergoDocs](https://github.com/germ/GergoDocs)
 
