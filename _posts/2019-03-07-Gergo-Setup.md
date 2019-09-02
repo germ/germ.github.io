@@ -38,7 +38,18 @@ Before we do anything at all we need to clean up the board! Grab a dremel or san
 ### Diodes 
 We're going to work easiest to hardest, so let's start with the diodes. Grab them and carefully empty them into a bowl, tin the pad with a bit of solder and orientate your diode. You're going to line these guys up under every key switch. You can tell which components are diodes by their irregular pad shape.
 
-Just line up the line on the top of your diode with the square pad on your PCB. After you have it lined up, heat the tinned pad slide the diode into place and remove the iron. Give it a second to cool and solder the other side. Easy!
+First, you will want to tin the square pads first.
+Check the image below.
+
+![Tinning the square pads](../img/gergo/10.png)
+
+![Diode image](../img/gergo/8.png)
+Now, you should put the `T` near the square pad and let it slide to its rightful place.
+Do it for all of the diodes so they are lined up.
+
+After that, you should solder the other side of the diode.
+
+![Soldered diode](../img/gergo/12.png)
 
 **Blue PCBs:** The diodes are in three lines towards the sides of the board. All your diodes will go here instead of under every switch.
 
@@ -47,29 +58,87 @@ Just line up the line on the top of your diode with the square pad on your PCB. 
 ### Caps
 Next up are the capacitors, They're the little brown guys with no markings. You have three types in this kit. 
 
-2x 22pf,  1x 1uf, 5x0.1uF
+![Capacitors](../img/gergo/8.png)
+2x 22pf,  1x 1uf, 5x0.1uF.
+But, the top right component on the image above is an oscillator.
 
-The two 22pF caps are labelled and located by the Oscillator, 1uF by the MCU and labelled, and the reset are dotted around the board. Most are labelled 0.1uF, If you see C5 or C6, those are also 0.1uF caps. Install them just like you did with the diodes, orientation does not matter.
+The function for capacitors is "just to save currents".
+So it won't matter the direction of how you put them.
+
+For 22pF capacitors, you should put them around the Oscillator just like the image below.
+
+![22pF capacitors](../img/gergo/15.png)
+
+For 1uF capacitor, you should look around the MCU and put them on the pad which
+marked by `1uF` like the following image.
+
+![1uF capacitor](../img/gergo/14.png)
+
+While the rest of the capacitors, 0.1uFs, you should look for pads which marked as such.
+Check this image below.
+
+![0.1uF capacitor](../img/gergo/17.png)
+
 
 **Blue PCBs:** The 0.1uF Caps are above the MCU in a line and the other is labelled at the top of your board.
 
 ### Resistors
+
+![Resistors](../img/gergo/6.png)
 Next up resistors, you've got 3 kinds 10K (103), 2.2K (222) 22Ohms  (22R0). Take a look on the silk screen for them and whack em in there! They will all be near the MCU or  USB port.If you see R1 on your board that's supposed to be a 2.2K resistor!
 
+For 10K Ohm resistors (which has `103` label on them), you should put them to pads
+with `10K` marks around them. 
+
+![10K Ohm resistors](../img/gergo/18.png)
+
+While for 220 Ohm resistors (which has `22R0` label on them), you will want to put them around
+pads with `22` marks around them.
+
+![220 Ohm resistors](../img/gergo/20.png)
+
+Now, for 2.2k resistors, you should put them around pads with `2.2K` marks around them.
+These resistors connect to the USB, so make sure you put it right.
+
+![2.2K Ohm resistors](../img/gergo/23.png)
+
+
 ### Osc
-The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest. Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away. Note if you're probing around in there [these diagonal pads are connected to each other](https://raw.githubusercontent.com/germ/GergoDocs/master/img/2.png)
+The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest. Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away. Note if you're probing around in there [these diagonal pads are connected to each other](../img/gergo/2.png)
 
 ### ICs
 Lastly the hard stuff! Remember if you mess up, you can order more electronics from the store!
 
 So you should have a few components left, we're going to start with the MCP (rectangular one). There is a small circle on your PCB and a circle on the IC. Line these up, if it's missing place the dot towards the top!
 
-Tin a pad on the top corner of it's pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it's aligned do the same to a corner pin on the other side of the board. Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next. Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.
+Check this image.
 
-Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](https://cdn.pbrd.co/images/HTQG2is.jpg). Also one batch of PCBs has a huge circle instead of a tiny marker, [so if you don't see something like this](https://raw.githubusercontent.com/germ/GergoDocs/master/img/26.png), that giant curved line is supposed to be that tiny circle. Line it up with that image.
+![MCP pads](../img/gergo/26.png)
+
+Tin a pad on the top corner of it's pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it's aligned do the same to a corner pin on the other side of the board.
+
+Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next. 
+
+![Something like this](../img/gergo/28.png)
+
+Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.
+
+Check this image for the completed result.
+
+![MCP result](../img/gergo/29.png)
+
+Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](https://cdn.pbrd.co/images/HTQG2is.jpg). Also one batch of PCBs has a huge circle instead of a tiny marker, so if you don't see something like the following image, that giant curved line is supposed to be that tiny circle. Line it up with that image.
+
+![Correct image](../img/gergo/26.png)
 
 ### Connectors
-Assuming you've done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch. Use flux for  the MiniUSB port and be careful of bridging. If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters. It just makes getting into position much easier. Be sure to wick out any solder bridges.
+Assuming you've done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch.
+
+Use flux for the MiniUSB port and be careful of bridging.
+If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters.
+It just makes getting into position much easier. Be sure to wick out any solder bridges.
+
+![Connectors](../img/gergo/3.png)
 
 **Note For Wired/Distortion:** Really glob that solder on there, pull up along the body of the jack to provide a bit more support. 
 
