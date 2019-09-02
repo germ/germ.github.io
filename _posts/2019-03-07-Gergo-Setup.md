@@ -148,6 +148,9 @@ Repeat the same on the MCU. There was a oversight on the silkscreen a bit of bac
 ### Connectors
 Assuming you've done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch.
 
+I really suggest you to make MiniUSB's connection really works first before you
+continue to the other components.
+
 Use flux for the MiniUSB port and be careful of bridging.
 If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters.
 It just makes getting into position much easier. Be sure to wick out any solder bridges.
