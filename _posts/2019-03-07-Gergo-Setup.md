@@ -44,6 +44,7 @@ Check the image below.
 ![Tinning the square pads](../img/gergo/10.png)
 
 ![Diode image](../img/gergo/8.png)
+
 Now, you should put the `T` near the square pad and let it slide to its rightful place.
 Do it for all of the diodes so they are lined up.
 
@@ -59,6 +60,7 @@ After that, you should solder the other side of the diode.
 Next up are the capacitors, They're the little brown guys with no markings. You have three types in this kit. 
 
 ![Capacitors](../img/gergo/8.png)
+
 2x 22pf,  1x 1uf, 5x0.1uF.
 But, the top right component on the image above is an oscillator.
 
@@ -85,7 +87,12 @@ Check this image below.
 ### Resistors
 
 ![Resistors](../img/gergo/6.png)
-Next up resistors, you've got 3 kinds 10K (103), 2.2K (222) 22Ohms  (22R0). Take a look on the silk screen for them and whack em in there! They will all be near the MCU or  USB port.If you see R1 on your board that's supposed to be a 2.2K resistor!
+
+Next up resistors, you've got 3 kinds 10K (103), 2.2K (222) 22Ohms (22R0).
+Take a look on the silk screen for them and whack em in there! They will all be near the MCU or USB port.
+If you see R1 on your board that's supposed to be a 2.2K resistor!
+
+Just like capacitors, resistors don't care about orientation.
 
 For 10K Ohm resistors (which has `103` label on them), you should put them to pads
 with `10K` marks around them. 
@@ -104,7 +111,14 @@ These resistors connect to the USB, so make sure you put it right.
 
 
 ### Osc
-The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest. Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away. Note if you're probing around in there [these diagonal pads are connected to each other](../img/gergo/2.png)
+The little recangular guy with four pads is the oscillator, it's a bit of a pain to solder on to be honest.
+Orientation doesn't matter here, but you'll tin one pad and slide the oscillator into place.
+After that get the other three legs soldered.
+Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure.
+Solder has a way of finding itself on top of the part as well, so you may need to wick that away.
+Note if you're probing around in there, these diagonals are connected to each other.
+
+![these diagonal pads are connected to each other](../img/gergo/2.png)
 
 ### ICs
 Lastly the hard stuff! Remember if you mess up, you can order more electronics from the store!
