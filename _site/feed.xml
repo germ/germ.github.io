@@ -6,9 +6,33 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Apr 2019 00:20:57 -0600</pubDate>
-    <lastBuildDate>Tue, 30 Apr 2019 00:20:57 -0600</lastBuildDate>
+    <pubDate>Tue, 17 Dec 2019 09:18:14 -0600</pubDate>
+    <lastBuildDate>Tue, 17 Dec 2019 09:18:14 -0600</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Reference/Assembly Diagrams</title>
+        <description>&lt;p&gt;All these boards are based on the Gergo, so follow the Gergo build guide and use these for the 
+locations of various components!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/placement/ginni.pdf&quot;&gt;Ginni&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/placement/gergo.pdf&quot;&gt;Gergo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/placement/gergoplex.pdf&quot;&gt;GergoPlex&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/placement/faunch.pdf&quot;&gt;FaunchPad&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/img/placement/buzz.pdf&quot;&gt;BuzzSaw&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Dec 2019 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Reference-Docs</link>
+        <guid isPermaLink="true">http://localhost:4000/Reference-Docs</guid>
+        
+        <category>Reference</category>
+        
+        
+      </item>
     
       <item>
         <title>Meeting Butterstick</title>
@@ -21,8 +45,9 @@ A note, try and use lighter switches then you would normally. Gateron Clears are
 &lt;h1 id=&quot;modes&quot;&gt;Modes&lt;/h1&gt;
 &lt;p&gt;There is a ton of overlap with the Georgi firmware, after you get your board set up and start mucking about with your FW go read &lt;a href=&quot;/Hacking-Georgi/&quot;&gt;Hacking Georgi&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;This is the default layout, for keys inbetween press both keys to trigger it. For the blue circles, all four in that area.
-&lt;img src=&quot;/img/butterstick/layout.png&quot; alt=&quot;default layout&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This is the default layout, for keys inbetween press both keys to trigger it. For the blue circles, all four in that area.&lt;/p&gt;
+&lt;h3 id=&quot;update-backspace-is-vbnm-forgot-to-include-it-in-the-maps&quot;&gt;Update: Backspace is VBNM! Forgot to include it in the maps&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/img/butterstick/layout.png&quot; alt=&quot;default layout&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are a few other ‘layers’ as well, the coloured keys are the prefix for the chord!
 &lt;img src=&quot;/img/butterstick/layers.png&quot; alt=&quot;Layers&quot; /&gt;&lt;/p&gt;
@@ -39,7 +64,7 @@ A note, try and use lighter switches then you would normally. Gateron Clears are
 
 &lt;h1 id=&quot;protips&quot;&gt;Protips&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;Do yourself a favour and print off the &lt;a href=&quot;/img/butterstick/lalout.png&quot;&gt;keyboard map&lt;/a&gt; and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!&lt;/li&gt;
+  &lt;li&gt;Do yourself a favour and print off the &lt;a href=&quot;/img/butterstick/layout.png&quot;&gt;keyboard map&lt;/a&gt; and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 11 Mar 2019 00:00:00 -0600</pubDate>
@@ -62,7 +87,8 @@ A note, try and use lighter switches then you would normally. Gateron Clears are
 
 &lt;p&gt;Your board is now ready for use with Plover, but you might accidentally toggle a few modes that are inside of Georgi, so let’s go over them.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Remember! If you have issues, unplugging your board and plugging it in will reset to a clean state.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remember! If you have issues, unplugging your board and plugging it in will reset to a clean state.&lt;/strong&gt;
+&lt;strong&gt;If using a non rev2 or higher board, be gentle on the TRRS jacks!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;modes&quot;&gt;Modes&lt;/h1&gt;
 &lt;p&gt;Georgi has three operation modes: Steno, QWERTY and Command.&lt;/p&gt;
@@ -117,9 +143,11 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 
 &lt;p&gt;&lt;img src=&quot;/img/georgi/setup.png&quot; alt=&quot;Setup&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/qmk/qmk_driver_installer/releases/download/v1.01/qmk_driver_installer.exe&quot;&gt;In addition you may need to install these drivers&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;protips&quot;&gt;Protips&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;Do yourself a favour and print off the &lt;a href=&quot;/img/georgi/keymap.png&quot;&gt;keyboard map&lt;/a&gt; and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!&lt;/li&gt;
+  &lt;li&gt;Do yourself a favour and print off the &lt;a href=&quot;/img/georgi/keymap.pdf&quot;&gt;keyboard map&lt;/a&gt; and leave it by your desk. This little guy is a radical departure from usual keyboards and with any new map, it’s going to take some getting used to. Looking stuff up is to be expected for the first bit and getting used to the keyboard itself is going to take a while even for existing stenographers!&lt;/li&gt;
   &lt;li&gt;You can do temporary plover from QWERTY if you hold the STENO button in your chord. Use this for sending shortcuts to plover for binds and other stuff.&lt;/li&gt;
   &lt;li&gt;Similarly you can do temporary QWERTY fingerspells from steno! Hold the STENO button while you’re typing.&lt;/li&gt;
 &lt;/ul&gt;
@@ -129,6 +157,22 @@ There are some chords tucked away on the thumbs as well on the bottom :)
         <guid isPermaLink="true">http://localhost:4000/Unboxing-Georgi</guid>
         
         <category>Georgi</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Building A Butterstick</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/img/butterstick/build.jpg&quot; alt=&quot;fax&quot; /&gt;
+&lt;img src=&quot;/img/butterstick/orient.jpg&quot; alt=&quot;orient&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Give the Gergo build guide a read, this uses the same parts. Just place them according to the diagram and photo.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Mar 2019 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/Butterstick-Build</link>
+        <guid isPermaLink="true">http://localhost:4000/Butterstick-Build</guid>
+        
+        <category>Butterstick</category>
         
         
       </item>
@@ -162,17 +206,11 @@ There are some chords tucked away on the thumbs as well on the bottom :)
 &lt;p&gt;One a trigger is matched, an action is taken. Any valid C code can be in there, but usually you’ll want to use the &lt;strong&gt;SEND()&lt;/strong&gt; function to press keys from the &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md&quot;&gt;QMK Keycode List&lt;/a&gt; or use SEND_STRING() to &lt;a href=&quot;https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md&quot;&gt;output some text&lt;/a&gt;. SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)&lt;/p&gt;
 
 &lt;h1 id=&quot;callers&quot;&gt;Callers&lt;/h1&gt;
-&lt;p&gt;There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom, on the first match it finds it runs the action and may halt further processing.&lt;/p&gt;
+&lt;p&gt;There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom to find the longest matching chord. Once that is found the chord is removed and the process repeats until all chords have been processed.&lt;/p&gt;
 
-&lt;p&gt;P will execute an action and halt further processing. P only works on an exact match, so any partial chords are ignored.&lt;/p&gt;
+&lt;p&gt;P is the macro we use for these definitions.&lt;/p&gt;
 
-&lt;p&gt;PJ will remove it’s trigger from a chord once it’s found, and add it’s presses to the the output. Typically PJ is used for modifiers such as shift, control, etc. Due to the nature of it, anything that relies on matching a chord that will be removed by a matching partial chord must be placed before any conflicting PJs. Due to this the typical structure is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conflicting Chords&lt;/li&gt;
-  &lt;li&gt;Modifiers/PJs&lt;/li&gt;
-  &lt;li&gt;Whole bunch of Ps&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;PC will add the chord specified to the rest of the chords matched in a stroke. So if you send CTRL, every other match in that chord will be sent with control.&lt;/p&gt;
 
 &lt;h1 id=&quot;layers&quot;&gt;Layers&lt;/h1&gt;
 &lt;p&gt;Unlike normal QMK boards, we can get away with only using a single layer and prefixing defined chords as “layers”. This is done by a few defines at the top like so &lt;code class=&quot;highlighter-rouge&quot;&gt;#define FUNCTION (LSU | LSD | ST3)&lt;/code&gt;. This will create a pseudo layer prefix chord that we can use elsewhere, for example: &lt;code class=&quot;highlighter-rouge&quot;&gt;P(FUNCTION | ST4, SEND_STRING(&quot;TEST&quot;));&lt;/code&gt; would send “TEST” when LSU, LSD, ST3, and ST4 are pressed. This is used in the default keymap for layers like Media and Movement.&lt;/p&gt;
@@ -259,6 +297,9 @@ Gergo section.&lt;/p&gt;
 
 &lt;p&gt;Gergo: Kit Assembly&lt;/p&gt;
 
+&lt;h3 id=&quot;note-there-are-some-differences-between-gergo-wired-black-pcb-and-gergo-distortion-and-protocol-blue-pcb-these-are-noted-below&quot;&gt;NOTE: There are some differences between Gergo: Wired (Black PCB) and Gergo: Distortion and Protocol (Blue PCB), these are noted below!&lt;/h3&gt;
+&lt;h3 id=&quot;note-you-can-enter-programming-mode-by-holding-the-rightmost-lower-15u-right-shift-and-plugging-gergo-in-or-pressing-the-reset&quot;&gt;NOTE: You can enter programming mode by holding the Rightmost-Lower 1.5u (Right Shift) and plugging Gergo in (or pressing the reset)&lt;/h3&gt;
+
 &lt;p&gt;IMAGES HERE: &lt;a href=&quot;https://github.com/germ/GergoDocs&quot;&gt;https://github.com/germ/GergoDocs&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;First and formost, I need you to take a nice deep breath. This is going to look like a lot and can be daunting! Trust me with a bit of videos and patience you can do it. Remember, this is a learning experience!&lt;/p&gt;
@@ -274,45 +315,139 @@ Gergo section.&lt;/p&gt;
 &lt;h3 id=&quot;diodes&quot;&gt;Diodes&lt;/h3&gt;
 &lt;p&gt;We’re going to work easiest to hardest, so let’s start with the diodes. Grab them and carefully empty them into a bowl, tin the pad with a bit of solder and orientate your diode. You’re going to line these guys up under every key switch. You can tell which components are diodes by their irregular pad shape.&lt;/p&gt;
 
-&lt;p&gt;Just line up the line on the top of your diode with the square pad on your PCB. After you have it lined up, heat the tinned pad slide the diode into place and remove the iron. Give it a second to cool and solder the other side. Easy!&lt;/p&gt;
+&lt;p&gt;First, you will want to tin the square pads first.
+Check the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/10.png&quot; alt=&quot;Tinning the square pads&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/8.png&quot; alt=&quot;Diode image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, you should put the &lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt; near the square pad and let it slide to its rightful place.
+Do it for all of the diodes so they are lined up.&lt;/p&gt;
+
+&lt;p&gt;After that, you should solder the other side of the diode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/12.png&quot; alt=&quot;Soldered diode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue PCBs:&lt;/strong&gt; The diodes are in three lines towards the sides of the board. All your diodes will go here instead of under every switch.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;MDF PROTIP&lt;/strong&gt;: Tin all the square pads before you start. Then heat and slide the diodes into position, finally finish up on the other side!&lt;/p&gt;
 
 &lt;h3 id=&quot;caps&quot;&gt;Caps&lt;/h3&gt;
 &lt;p&gt;Next up are the capacitors, They’re the little brown guys with no markings. You have three types in this kit.&lt;/p&gt;
 
-&lt;p&gt;2x 22pf,  1x 1uf, 5x0.1uF&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../img/gergo/8.png&quot; alt=&quot;Capacitors&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;The two 22pF caps are labelled and located by the Oscillator, 1uF by the MCU and labelled, and the reset are dotted around the board. Most are labelled 0.1uF, If you see C5 or C6, those are also 0.1uF caps. Install them just like you did with the diodes, orientation does not matter.&lt;/p&gt;
+&lt;p&gt;2x 22pf,  1x 1uf, 5x0.1uF.
+But, the top right component on the image above is an oscillator.&lt;/p&gt;
+
+&lt;p&gt;The function for capacitors is “just to save currents”.
+So it won’t matter the direction of how you put them.&lt;/p&gt;
+
+&lt;p&gt;For 22pF capacitors, you should put them around the Oscillator just like the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/15.png&quot; alt=&quot;22pF capacitors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For 1uF capacitor, you should look around the MCU and put them on the pad which
+marked by &lt;code class=&quot;highlighter-rouge&quot;&gt;1uF&lt;/code&gt; like the following image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/14.png&quot; alt=&quot;1uF capacitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While the rest of the capacitors, 0.1uFs, you should look for pads which marked as such.
+Check this image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/17.png&quot; alt=&quot;0.1uF capacitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue PCBs:&lt;/strong&gt; The 0.1uF Caps are above the MCU in a line and the other is labelled at the top of your board.&lt;/p&gt;
 
 &lt;h3 id=&quot;resistors&quot;&gt;Resistors&lt;/h3&gt;
-&lt;p&gt;Next up resistors, you’ve got 3 kinds 10K (103), 2.2K (222) 22Ohms  (22R0). Take a look on the silk screen for them and whack em in there! They will all be near the MCU or  USB port.If you see R1 on your board that’s supposed to be a 2.2K resistor!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/6.png&quot; alt=&quot;Resistors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next up resistors, you’ve got 3 kinds 10K (103), 2.2K (222) 22Ohms (22R0).
+Take a look on the silk screen for them and whack em in there! They will all be near the MCU or USB port.
+If you see R1 on your board that’s supposed to be a 2.2K resistor!&lt;/p&gt;
+
+&lt;p&gt;Just like capacitors, resistors don’t care about orientation.&lt;/p&gt;
+
+&lt;p&gt;For 10K Ohm resistors (which has &lt;code class=&quot;highlighter-rouge&quot;&gt;103&lt;/code&gt; label on them), you should put them to pads
+with &lt;code class=&quot;highlighter-rouge&quot;&gt;10K&lt;/code&gt; marks around them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/18.png&quot; alt=&quot;10K Ohm resistors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While for 220 Ohm resistors (which has &lt;code class=&quot;highlighter-rouge&quot;&gt;22R0&lt;/code&gt; label on them), you will want to put them around
+pads with &lt;code class=&quot;highlighter-rouge&quot;&gt;22&lt;/code&gt; marks around them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/20.png&quot; alt=&quot;220 Ohm resistors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, for 2.2k resistors, you should put them around pads with &lt;code class=&quot;highlighter-rouge&quot;&gt;2.2K&lt;/code&gt; marks around them.
+These resistors connect to the USB, so make sure you put it right.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/23.png&quot; alt=&quot;2.2K Ohm resistors&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;osc&quot;&gt;Osc&lt;/h3&gt;
-&lt;p&gt;The little recangular guy with four pads is the oscillator, it’s a bit of a pain to solder on to be honest. Orientation doesn’t matter here, but you’ll tin one pad and slide the oscillator into place. After that get the other three legs soldered. Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure. Solder has a way of finding itself on top of the part as well, so you may need to wick that away. Note if you’re probing around in there &lt;a href=&quot;https://raw.githubusercontent.com/germ/GergoDocs/master/img/2.png&quot;&gt;these diagonal pads are connected to each other&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The little recangular guy with four pads is the oscillator, it’s a bit of a pain to solder on to be honest.
+Orientation doesn’t matter here, but you’ll tin one pad and slide the oscillator into place.
+After that get the other three legs soldered.
+Be careful to use as little solder as possible as this guy loves to form solder bridges! Use a continuity tester to be sure.
+Solder has a way of finding itself on top of the part as well, so you may need to wick that away.
+Note if you’re probing around in there, these diagonals are connected to each other.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/2.png&quot; alt=&quot;these diagonal pads are connected to each other&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;ics&quot;&gt;ICs&lt;/h3&gt;
 &lt;p&gt;Lastly the hard stuff! Remember if you mess up, you can order more electronics from the store!&lt;/p&gt;
 
-&lt;p&gt;So you should have a few components left, we’re going to start with the MCP (rectangular one). There is a small circle on your PCB and a circle on the IC. Line these up.&lt;/p&gt;
+&lt;p&gt;So you should have a few components left, we’re going to start with the MCP (rectangular one). There is a small circle on your PCB and a circle on the IC. Line these up, if it’s missing place the dot towards the top!&lt;/p&gt;
 
-&lt;p&gt;Tin a pad on the top corner of it’s pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it’s aligned do the same to a corner pin on the other side of the board. Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next. Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.&lt;/p&gt;
+&lt;p&gt;Check this image.&lt;/p&gt;
 
-&lt;p&gt;Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. &lt;a href=&quot;https://cdn.pbrd.co/images/HTQG2is.jpg&quot;&gt;&lt;strong&gt;Here is a image, don’t fuck this up&lt;/strong&gt;&lt;/a&gt;. Also one batch of PCBs has a huge circle instead of a tiny marker, &lt;a href=&quot;https://raw.githubusercontent.com/germ/GergoDocs/master/img/26.png&quot;&gt;so if you don’t see something like this&lt;/a&gt;, that giant curved line is supposed to be that tiny circle. Line it up with that image.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../img/gergo/26.png&quot; alt=&quot;MCP pads&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tin a pad on the top corner of it’s pads, heat and align the pins. Be careful! Too much force and you will bend a pin, too long with the iron and you may damage the chip! After it’s aligned do the same to a corner pin on the other side of the board.&lt;/p&gt;
+
+&lt;p&gt;Apply flux to the contacts and put some solder on the end of your iron. Do one pin at a time waiting until the solder has flowed before moving onto the next.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/28.png&quot; alt=&quot;Something like this&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember to check the warmth of the chip periodically! Check the pins for solder bridges and reflow/wick solder as necessary. You should be able to see gaps between the pins when viewed from the side.&lt;/p&gt;
+
+&lt;p&gt;Check this image for the completed result.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/29.png&quot; alt=&quot;MCP result&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. &lt;a href=&quot;https://cdn.pbrd.co/images/HTQG2is.jpg&quot;&gt;&lt;strong&gt;Here is a image, don’t fuck this up&lt;/strong&gt;&lt;/a&gt;. Also one batch of PCBs has a huge circle instead of a tiny marker, so if you don’t see something like the following image, that giant curved line is supposed to be that tiny circle. Line it up with that image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/26.png&quot; alt=&quot;Correct image&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;connectors&quot;&gt;Connectors&lt;/h3&gt;
-&lt;p&gt;Assuming you’ve done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch. Use flux for  the MiniUSB port and be careful of bridging. If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters. It just makes getting into position much easier. Be sure to wick out any solder bridges.&lt;/p&gt;
+&lt;p&gt;Assuming you’ve done everything correctly all that is left is the simple stuff! Attach the TRRS jacks using a good amount of solder, same for MiniUSB and the reset switch.&lt;/p&gt;
+
+&lt;p&gt;I really suggest you to make MiniUSB’s connection really works first before you
+continue to the other components.&lt;/p&gt;
+
+&lt;p&gt;Use flux for the MiniUSB port and be careful of bridging.
+If you have problems a little tip is to remove or bend the rear casing using a pair of flush cutters.
+It just makes getting into position much easier. Be sure to wick out any solder bridges.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/gergo/3.png&quot; alt=&quot;Connectors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note For Wired/Distortion:&lt;/strong&gt; Really glob that solder on there, pull up along the body of the jack to provide a bit more support.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blue PCBS: The reset may have two plastic pins under it, if it does clip them off before attaching the reset button&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;programmingtesting&quot;&gt;Programming/Testing&lt;/h3&gt;
 &lt;p&gt;Alright, we’re in the homestretch. Go off and install these &lt;a href=&quot;https://sourceforge.net/projects/dfu-programmer/files/dfu-programmer/0.7.0/&quot;&gt;drivers&lt;/a&gt; or install dfu-programmer from your repo. We’re going to need them after we run through a checklist.&lt;/p&gt;
 
 &lt;p&gt;1) Are there any empty pads on the board?&lt;/p&gt;
 
-&lt;p&gt;2 ) Can you see any solder bridges between pins?&lt;/p&gt;
+&lt;p&gt;2) Can you see any solder bridges between pins?&lt;/p&gt;
 
-&lt;p&gt;3)  Unsoldered all pads on any component?&lt;/p&gt;
+&lt;p&gt;3) Unsoldered all pads on any component?&lt;/p&gt;
 
 &lt;p&gt;4) Any diodes in the wrong orientation?&lt;/p&gt;
+
+&lt;p&gt;5) &lt;strong&gt;Blue PCBs&lt;/strong&gt;, if you hold the board up to a bright light can you see any bridges on the ICs?&lt;/p&gt;
 
 &lt;p&gt;If you answered No to every one of those you’re ready to test! Install those drivers and reboot if you’re a Windows user. If you’ve done everything correctly you should see a Atmel device in Device Manager! Linux users: Run lsusb as root ( watch -n 1 lsusb ). If so, congrats, you’ve done it. Proceed to Install your switches and proceed to configuring Gergo!&lt;/p&gt;
 
@@ -403,13 +538,22 @@ If you know what you’re doing just run this&lt;/p&gt;
     
       <item>
         <title>Georgi Firmwares</title>
-        <description>&lt;p&gt;&lt;strong&gt;Note: If you aren’t testing Beta Builds, you don’t want to flash these **
+        <description>&lt;h1 id=&quot;current-qmk-master-builddownload&quot;&gt;Current QMK Master Build:&lt;a href=&quot;https://qmk.fm/compiled/georgi_default.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Note: If you aren’t testing Beta Builds, you don’t want to flash these **
 **You can check what your current firmware is by pressing #-TSDZ in QWERTY mode&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;release-candidate-01-wilfred--download&quot;&gt;Release Candidate 01, Wilfred : &lt;a href=&quot;fw/georgi_RC01_Wilfred.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Macro cleanup
-- Compiled in layer support
-- Added sticky-bits
-- Added compile options for FW size
+&lt;h1 id=&quot;version-11-claymdownload&quot;&gt;Version 1.1 ClayM:&lt;a href=&quot;fw/georgi_v1_1.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Mid-QWERTY stroke improvements
+- Added Partial Chords 
+- Added Sticky Bits
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;version-11-claym-flippeddownload&quot;&gt;Version 1.1 ClayM-Flipped:&lt;a href=&quot;fw/georgi_v1.1-Flipped.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Same as 1.1, but with flipped number keys as the stenographers seem to enjoy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;version-1-stenoknight-download&quot;&gt;Version 1, Stenoknight: &lt;a href=&quot;fw/georgi_RC01_Wilfred.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- Literally the same as the RC!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;alpha-03-tomatosoup-download&quot;&gt;Alpha 03, TomatoSoup: &lt;a href=&quot;/fw/georgi_0.03_TomatoSoup.hex&quot;&gt;Download&lt;/a&gt;&lt;/h1&gt;

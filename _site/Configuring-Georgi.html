@@ -75,17 +75,11 @@
 <p>One a trigger is matched, an action is taken. Any valid C code can be in there, but usually you’ll want to use the <strong>SEND()</strong> function to press keys from the <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md">QMK Keycode List</a> or use SEND_STRING() to <a href="https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md">output some text</a>. SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)</p>
 
 <h1 id="callers">Callers</h1>
-<p>There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom, on the first match it finds it runs the action and may halt further processing.</p>
+<p>There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom to find the longest matching chord. Once that is found the chord is removed and the process repeats until all chords have been processed.</p>
 
-<p>P will execute an action and halt further processing. P only works on an exact match, so any partial chords are ignored.</p>
+<p>P is the macro we use for these definitions.</p>
 
-<p>PJ will remove it’s trigger from a chord once it’s found, and add it’s presses to the the output. Typically PJ is used for modifiers such as shift, control, etc. Due to the nature of it, anything that relies on matching a chord that will be removed by a matching partial chord must be placed before any conflicting PJs. Due to this the typical structure is:</p>
-
-<ul>
-  <li>Conflicting Chords</li>
-  <li>Modifiers/PJs</li>
-  <li>Whole bunch of Ps</li>
-</ul>
+<p>PC will add the chord specified to the rest of the chords matched in a stroke. So if you send CTRL, every other match in that chord will be sent with control.</p>
 
 <h1 id="layers">Layers</h1>
 <p>Unlike normal QMK boards, we can get away with only using a single layer and prefixing defined chords as “layers”. This is done by a few defines at the top like so <code class="highlighter-rouge">#define FUNCTION (LSU | LSD | ST3)</code>. This will create a pseudo layer prefix chord that we can use elsewhere, for example: <code class="highlighter-rouge">P(FUNCTION | ST4, SEND_STRING("TEST"));</code> would send “TEST” when LSU, LSD, ST3, and ST4 are pressed. This is used in the default keymap for layers like Media and Movement.</p>
@@ -130,15 +124,15 @@
   <div class="col-box-title">Newest Posts</div>
   <ul class="post-list">
     
+      <li><a class="post-link" href="/Reference-Docs">Reference/Assembly Diagrams</a></li>
+    
       <li><a class="post-link" href="/Meet-Butter-Stick">Meeting Butterstick</a></li>
     
       <li><a class="post-link" href="/Unboxing-Georgi">Unboxing Georgi</a></li>
     
+      <li><a class="post-link" href="/Butterstick-Build">Building A Butterstick</a></li>
+    
       <li><a class="post-link" href="/Configuring-Georgi">Configuring Georgi</a></li>
-    
-      <li><a class="post-link" href="/Hacking-Georgi">Hacking Georgi</a></li>
-    
-      <li><a class="post-link" href="/Gergo-Setup">Gergo Setup</a></li>
     
   </ul>
 </div>-->
