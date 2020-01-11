@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reference/Assembly Diagrams
+title: Reference/Assembly Diagrams, Proto Firmware
 desc: Reference Docs for g Heavy boards.
 tags: [Reference]
 ---
@@ -17,3 +17,11 @@ locations of various components!
 [FaunchPad](/img/placement/faunch.pdf)
 
 [BuzzSaw](/img/placement/buzz.pdf)
+
+For the Firmware grab the development jazz from my github. These keymaps will change
+and please submit a PR! Once they're stable they'll be merged into QMK master.
+
+```
+git clone https://github.com/germ/qmk_firmware.git
+git checkout gboards-update
+```
