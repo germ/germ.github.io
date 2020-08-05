@@ -24,5 +24,4 @@ and please submit a PR! Once they're stable they'll be merged into QMK master.
 
 ```
 git clone https://github.com/germ/qmk_firmware.git
-git checkout gboards-update
 ```
