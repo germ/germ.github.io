@@ -12,15 +12,15 @@ title: Georgi Firmwares
 **Note: If you aren't testing Beta Builds, you don't want to flash these **
 
 **You can check what your current firmware is by pressing #-TSDZ in QWERTY mode**
-# Version 1.1 ClayM:[Download](fw/georgi_v1_1.hex)
+# Version 1.1 ClayM:[Download](/fw/georgi_v1_1.hex)
 	- Mid-QWERTY stroke improvements
 	- Added Partial Chords 
 	- Added Sticky Bits
 
-# Version 1.1 ClayM-Flipped:[Download](fw/georgi_v1.1-Flipped.hex)
+# Version 1.1 ClayM-Flipped:[Download](/fw/georgi_v1.1-Flipped.hex)
 	- Same as 1.1, but with flipped number keys as the stenographers seem to enjoy
 
-# Version 1, Stenoknight: [Download](fw/georgi_RC01_Wilfred.hex)
+# Version 1, Stenoknight: [Download](/fw/georgi_RC01_Wilfred.hex)
 	- Literally the same as the RC!
 
 # Alpha 03, TomatoSoup: [Download](/fw/georgi_0.03_TomatoSoup.hex)
