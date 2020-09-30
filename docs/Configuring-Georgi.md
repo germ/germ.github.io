@@ -11,7 +11,7 @@ tags: [Georgi]
 Awesome, now that you've figured out the convoluted shitshow that is Georgi, let's get on making it usable for you! A little forward is necessary here, if you've used QMK before, Georgi does some very unQMK things.
 
 # The Future
-We're currently working with the QMK team to develop a front end that is compatible with the [QMK configurator](http://config.qmk.fm). Once this is done, configuring Georgi or other steno boards from the browser will be possible. Until then, we need to set up the build environment. [So give this a diddle and come on back.](https://github.com/qmk/qmk_firmware/blob/master/docs/getting_started_build_tools.md).
+We're currently working with the QMK team to develop a front end that is compatible with the [QMK configurator](http://config.qmk.fm). Once this is done, configuring Georgi or other steno boards from the browser will be possible. Until then, we need to set up the build environment. [So give this a diddle and come on back.](https://beta.docs.qmk.fm/tutorial/newbs_getting_started).
 
 # Structure of a keymap
 Good on you for getting that all set up!
@@ -30,7 +30,7 @@ A trigger looks like this 'LSD | LK | LW | LR', the pipe character is used to gl
 We will talk about triggers in a little bit again later on.
 
 # Actions
-One a trigger is matched, an action is taken. Any valid C code can be in there, but usually you'll want to use the **SEND()** function to press keys from the [QMK Keycode List](https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md) or use SEND_STRING() to [output some text](https://github.com/qmk/qmk_firmware/blob/master/docs/feature_macros.md). SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)
+One a trigger is matched, an action is taken. Any valid C code can be in there, but usually you'll want to use the **SEND()** function to press keys from the [QMK Keycode List](https://beta.docs.qmk.fm/keycodes) or use SEND_STRING() to [output some text](https://beta.docs.qmk.fm/feature_macros). SEND_STRING can also be used to send modifiers such as control, push buttons, delay and all sorts of fun stuff. A good idea is to try a small modification to a existing action before going insane :)
 
 # Callers
 There are two different callers that can respond to a chord: P (Press) and PJ (Press Non Jumping). The dictionary is looked up from the top top the bottom to find the longest matching chord. Once that is found the chord is removed and the process repeats until all chords have been processed.
