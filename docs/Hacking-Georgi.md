@@ -6,7 +6,7 @@ layout: post
 ---
 
 # Hacking Georgi
-Alright, so you've finally found something that you can't do from the default firmware. A bit of heads up here, you're going to need to know some QMK internals so [give this excellent guide a read](https://beta.docs.qmk.fm/for-a-deeper-understanding/understanding_qmk) and come on back.
+Alright, so you've finally found something that you can't do from the default firmware. A bit of heads up here, you're going to need to know some QMK internals so [give this excellent guide a read](https://beta.docs.qmk.fm/developing-qmk/for-a-deeper-understanding/understanding_qmk) and come on back.
 
 ### How Georgi Do
 Pop open sten.h so you have a reference to use. Everything that Georgi does is independent of QMK proper and happens in here and processQwerty() in the keymap. The current chord state is held in a cChord. We hook `process_steno_user` to update this chord as keys come in and hook `send_steno_chord_user` to process everything once the keys are up. If none of our actions match we return true and continue processing (QMK will then send the steno codes).
