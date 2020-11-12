@@ -141,7 +141,7 @@ Check this image for the completed result.
 
 ![MCP result](/img/gergo/29.png)
 
-Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](https://cdn.pbrd.co/images/HTQG2is.jpg). Also one batch of PCBs has a huge circle instead of a tiny marker, so if you don't see something like the following image, that giant curved line is supposed to be that tiny circle. Line it up with that image.
+Repeat the same on the MCU. There was a oversight on the silkscreen a bit of background makes it look like there are two places of pin 1. The correct placement of the dot is towards the switches. [**Here is a image, don't fuck this up**](http://docs.gboards.ca/img/gergo/2.png). Also one batch of PCBs has a huge circle instead of a tiny marker, so if you don't see something like the following image, that giant curved line is supposed to be that tiny circle. Line it up with that image.
 
 ![Correct image](/img/gergo/26.png)
 
