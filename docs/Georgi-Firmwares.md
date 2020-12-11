@@ -44,9 +44,8 @@ I maintain a branch on GitHub for all my development work, this is where we subm
 
 To get devel:
 ```
-git clone https://github.com/germ/qmk\_firmware.git
-git checkout georgi
-make georgi:default:dfu
+git clone https://github.com/germ/qmk_firmware.git
+make gboards/k/georgi:default:dfu
 ```
 
 If you make changes, come up with funky layouts and all that. Submit a PR and we'll merge it and bundle it together with our next push to master!
