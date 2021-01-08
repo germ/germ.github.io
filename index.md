@@ -14,5 +14,5 @@ The Combo/Chording Engine docs can be found over at [combos.gboards.ca](http://c
 Currently I'm migrating boards over to this new system.
 
 [Twitter](https://twitter.com/gheavyindustry){: .btn }
-[Email](mailto:bernhardtjeremy@gmail.com){: .btn }
+[Email](mailto:jane@gboards.ca){: .btn }
 [Github](https://github.com/germ){: .btn }
